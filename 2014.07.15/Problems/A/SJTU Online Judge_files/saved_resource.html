@@ -1,0 +1,99 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1990/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><style type="text/css"></style></head><body>Mr. Cooper, the CEO of CozyWalk Co., receives a report of daily sales every day since the company has been established. Starting from 
+the second day since its establishment, on receiving the report, he compares it with each of the previous reports in order to calculate 
+the number of previous days whose sales amounts are less than or equal to it. After obtaining the number of such days, he writes it in 
+a list. 
+
+<p>
+This problem can be stated more formally as follows. Let <!-- MATH
+ $A = (a_1, a_2, \dots, a_n)$
+ -->
+<span class="MATH"><i>A</i> = (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>,..., <i>a</i><sub>n</sub>)</span> denote the list of daily sales amounts. 
+And let <!-- MATH
+ $B = (b_1, b_2, \dots, b_{n-�1})$
+ -->
+<span class="MATH"><i>B</i> = (<i>b</i><sub>1</sub>, <i>b</i><sub>2</sub>,..., <i>b</i><sub>n-1</sub>)</span> be another integer list maintained by Mr. Cooper, each value representing the number of such 
+previous days. On the <span class="MATH"><i>i</i></span>-th day (<!-- MATH
+ $2 \le i \le n$
+ -->
+<span class="MATH">2<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>i</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>n</i></span>), he calculates <span class="MATH"><i>b</i><sub>i-1</sub></span>, the number of <span class="MATH"><i>a</i><sub>k</sub></span>'s such that <!-- MATH
+ $a_k \le a_i$
+ -->
+<span class="MATH"><i>a</i><sub>k</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>a</i><sub>i</sub></span> (<!-- MATH
+ $1 \le k < i$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>k</i> &lt; <i>i</i></span>). 
+
+</p><p>
+For example, suppose that <!-- MATH
+ $A = (20, 43, 57, 43, 20)$
+ -->
+<span class="MATH"><i>A</i> = (20, 43, 57, 43, 20)</span>. For the fourth day's sales amount, <span class="MATH"><i>a</i><sub>4</sub> = 43</span>, the number of previous days 
+whose sales amounts are less than or equal to it is 2 since <!-- MATH
+ $a_1 \le a_4$
+ -->
+<span class="MATH"><i>a</i><sub>1</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>a</i><sub>4</sub></span>, <!-- MATH
+ $a_2 \le a_4$
+ -->
+<span class="MATH"><i>a</i><sub>2</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>a</i><sub>4</sub></span>, and <span class="MATH"><i>a</i><sub>3</sub> &gt; <i>a</i><sub>4</sub></span>. Therefore, <span class="MATH"><i>b</i><sub>3</sub> = 2</span>. Similarly, 
+<span class="MATH"><i>b</i><sub>1</sub></span>, <span class="MATH"><i>b</i><sub>2</sub></span>, and <span class="MATH"><i>b</i><sub>4</sub></span> can be obtained and it results in <!-- MATH
+ $B = (1, 2, 2, 1)$
+ -->
+<span class="MATH"><i>B</i> = (1, 2, 2, 1)</span>. 
+
+</p><p>
+Given an array of size <span class="MATH"><i>n</i></span> for the list of daily sales amounts, 
+write a program that prints the sum of the <span class="MATH"><i>n</i> - 1</span> integers in the list <span class="MATH"><i>B</i></span>.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+Your program is to read the input from standard input. The input consists of <span class="MATH"><i>T</i></span> test cases. The number of test cases <span class="MATH"><i>T</i></span> is given 
+in the first line of the input. Each test case starts with a line containing an integer <span class="MATH"><i>n</i></span> (<!-- MATH
+ $2 \le n \le 1,000$
+ -->
+<span class="MATH">2<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18">1, 000</span>), which represents the 
+size of the list <span class="MATH"><i>A</i></span> . In the following line, <span class="MATH"><i>n</i></span> integers are given, each represents the daily sales amounts <span class="MATH"><i>a</i><sub>i</sub></span> (<!-- MATH
+ $1 \le a_i \le 5,000$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>a</i><sub>i</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18">5, 000</span> 
+and <!-- MATH
+ $1 \le i \le n$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>i</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4843img1.png" width="18"><i>n</i></span>) for the test case. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+Your program is to write to standard output. For each test case, print the sum of 
+the <span class="MATH"><i>n</i> - 1</span> integers in the list <span class="MATH"><i>B</i></span> which is obtained from the list <span class="MATH"><i>A</i></span>.
+
+</p><p>
+The following shows sample input and output for two test cases. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>2
+5
+38 111 102 111 177
+8
+276 284 103 439 452 276 452 398
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>9
+20
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

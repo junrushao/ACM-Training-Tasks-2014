@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0048)http://172.16.45.6/contests/1003/problem-F/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1867. Nanotechnologies @ Timus Online Judge</title></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1867. Nanotechnologies</h2><div class="problem_limits">Time limit: 1.0 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_normal">Specialists at the Nanotechnology Lab at the Ural Federal University work on developing a computer that would operate at the level of individual atoms. They have recently learned that <i>n</i> tantalum atoms arranged on a plane in a special way can be used for constructing a quantum computer with earlier unattainable characteristics.</div></div><div class="problem_par"><div class="problem_par_normal">Unfortunately, the theory describes only some of the physical characteristics of such a system of atoms. The physicists must find an arrangement of atoms that would provide the necessary effect. The scanning tunneling microscope used in the project can place tantalum atoms only at points whose coordinates are integers with absolute values not exceeding&nbsp;10<sup>6</sup>; the unit of the coordinate system is one nanometer.</div></div><div class="problem_par"><div class="problem_par_normal">The scientists ask you to help them determine the coordinates of the atoms. They have eliminated the unnecessary physical information, providing you only with the squared distances between all the pairs of atoms.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">The first line contains the total number of atoms <i>n</i> (2 ≤ <i>n</i> ≤ 100).
+In the following <i>n</i> lines you are given an <i>n</i> × <i>n</i> matrix <i>a</i><sub><i>ij</i></sub> with integer elements.
+The number <i>a</i><sub><i>ij</i></sub> is the required squared distance between atoms numbered
+<i>i</i> and <i>j</i> (0 ≤ <i>a</i><sub><i>ij</i></sub> ≤ 10<sup>9</sup>; <i>a</i><sub><i>ij</i></sub> = <i>a</i><sub><i>ji</i></sub>; <i>a</i><sub><i>ii</i></sub> = 0).</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">If there is an arrangement satisfying the given matrix of squared distances, output <i>n</i> lines.
+The <i>i</i>th line must contain the coordinates of the <i>i</i>th atom; they must be integers with
+absolute values not exceeding&nbsp;10<sup>6</sup>. If there are several possible answers, output any of them.
+If it is impossible to arrange the atoms as required, output “Impossible”.</div></div><h3 class="problem_subtitle">Samples</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">3
+0 1 4
+1 0 1
+4 1 0
+</pre></td><td><pre class="intable">0 0
+1 0
+2 0
+</pre></td></tr><tr><td><pre class="intable">3
+0 1 5
+1 0 1
+5 1 0
+</pre></td><td><pre class="intable">Impossible
+</pre></td></tr><tr><td><pre class="intable">3
+0 1 0
+1 0 1
+0 1 0
+</pre></td><td><pre class="intable">5 -5
+5 -4
+5 -5
+</pre></td></tr></tbody></table><div class="problem_source"><b>Problem Author: </b>Sergey Pupyrev (prepared by Ivan Burmistrov)<br><b>Problem Source: </b>Open Ural FU Championship 2011<br><br></div></div></div><script type="text/javascript" async="" src="watch.js"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript>&lt;div&gt;&lt;img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/&gt;&lt;/div&gt;</noscript><div></div></body></html>

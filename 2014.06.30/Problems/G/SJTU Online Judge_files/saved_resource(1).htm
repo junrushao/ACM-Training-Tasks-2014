@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0048)http://172.16.45.6/contests/1003/problem-G/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1868. Prediction Contest @ Timus Online Judge</title></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1868. Prediction Contest</h2><div class="problem_limits">Time limit: 1.0 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_normal">At the ICPC World Finals, four sets of gold medals, four sets of silver medals, and four
+sets of bronze medals are awarded; thus, top twelve teams win medals.</div></div><div class="problem_par"><div class="problem_par_normal">There were few days left before the World Finals in Orlando. Veterans of collegiate programming contests
+from Ural State University were hotly debating chances of the teams for medals at the forthcoming contest.
+Vadik suggested that every person who wanted to make a prediction for the results of the finals should
+pool five dollars and state several guesses of the form “The team of university&nbsp;<i>X</i> will win a medal
+of type&nbsp;<i>Y</i>.” The veterans who made the maximum number of true guesses would share the pooled money
+between them.</div></div><div class="problem_par"><div class="problem_par_normal">But the veterans refused saying that the results of the finals are always very difficult to predict and nobody wanted to lose five dollars.
+Then Vadik changed the conditions of the prediction contest. He said that the participants didn't have to pay, but everybody
+who made the maximum number of true predictions would receive five dollars from Vadik. The veterans agreed to these conditions,
+and each of them stated several predictions about which team would win which medal.</div></div><div class="problem_par"><div class="problem_par_normal">Given the result of the World Finals and all the predictions made, find the amount of money
+that Vadik had to pay to the winners of the competition.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">In the first twelve lines you are given the names of the universities winning the medals of the World Finals.
+The universities are listed in the order from the first place to the twelfth place.</div></div><div class="problem_par"><div class="problem_par_normal">In the following line you are given the number&nbsp;<i>n</i> of participants of the prediction contest (1 ≤ <i>n</i> ≤ 100).
+Then go <i>n</i> blocks containing the veterans' predictions. The <i>i</i>th block starts with the number of predictions&nbsp;<i>k</i><sub><i>i</i></sub>
+made by the <i>i</i>th participant. The predictions are given in the following <i>k</i><sub><i>i</i></sub> lines, each prediction has the form
+&lt;name_of_university&gt;&nbsp;:&nbsp;&lt;medal&gt;. Here, &lt;medal&gt; is the word “gold”, “silver”, or “bronze”.
+The predictions of each participant are consistent: no university can win more than one medal and the total number
+of medals of each kind is at most four.</div></div><div class="problem_par"><div class="problem_par_normal">The names of the universities consist of uppercase and lowercase English letters, underscore characters, dots, and commas.
+The length of each name is in the range from one to thirty symbols.</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">Output the amount of money that Vadik paid according to the result of the prediction contest.
+If more than one participant made the maximum number of true predictions, Vadik paid five dollars to each of them.</div></div><h3 class="problem_subtitle">Sample</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">Zhejiang_U
+U_of_Michigan_at_Ann_Arbor
+Tsinghua_U
+St._Petersburg_SU
+Nizhny_Novgorod_SU
+Saratov_SU
+Friedrich_Alexander_U
+Donetsk_National_U
+Jagiellonian_U_in_Krakow
+Moscow_SU
+Ural_SU
+U_of_Waterloo
+3
+6
+Moscow_SU : gold
+St._Petersburg_SU_of_ITMO : gold
+Warsaw_U : gold
+Tsinghua_U : gold
+Nizhny_Novgorod_SU : silver
+Saratov_SU : silver
+6
+Warsaw_U : gold
+Saratov_SU : gold
+Tsinghua_U : gold
+Donetsk_National_U : silver
+St._Petersburg_SU_of_ITMO : silver
+Ural_SU : bronze
+6
+Zhejiang_U : gold
+Tsinghua_U : gold
+Shanghai_Jiao_Tong_U : gold
+Fudan_U : gold
+Moscow_SU : silver
+Nizhny_Novgorod_SU : silver
+</pre></td><td><pre class="intable">15
+</pre></td></tr></tbody></table><div class="problem_source"><b>Problem Author: </b>Denis Dublennykh<br><b>Problem Source: </b>Open Ural FU Championship 2011<br><br></div></div></div><script type="text/javascript" async="" src="watch.js"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript>&lt;div&gt;&lt;img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/&gt;&lt;/div&gt;</noscript><div></div></body></html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0038)http://172.16.45.6/problems/8208/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1920. Titan Ruins: the Infinite Power of Magic @ Timus Online Judge</title><style type="text/css"></style></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1920. Titan Ruins: the Infinite Power of Magic</h2><div class="problem_limits">Time limit: 1.0 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_normal">`It seems that our efforts were not in vain,' Alba said after studying an ancient volume.
+`I've found here a method for accumulating a tremendous amount of energy.
+And the idea is so simple that I wonder why nobody has discovered it.
+The usual problem is that magic energy is unstable and it's difficult to keep it in one place.
+But if we channel it along a closed path, it'll have no way out. We only have to choose the right length of the path
+to keep the flow stable. Then we can pump in as much energy as we want. And when we break the path
+we'll release a magic flow of enormous power. It'll be a real breakthrough in war magic!'<br>
+`Yes, but the path must be long enough and you can't drag a large device over a battlefield.'<br>
+`That's not a problem. The form of the path can be arbitrary. We can design a compact scheme of the device.
+Actually, the device is here already, it's there in the corner. We only have to adjust it.'<br><br></div></div><div class="problem_par"><div class="problem_par_normal">Indeed, there was a square grid with <i>n</i> × <i>n</i> nodes. At each node there was a prism that could be turned so as to either direct
+a flow of magic energy straightly or turn it by&nbsp;90°. Soren and Alba had to position <i>L</i> prisms so that a cyclic flow of magic
+energy of length&nbsp;<i>L</i> could be directed through them.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">You are given the integers <i>n</i> and <i>L</i> (2 ≤ <i>n</i> ≤ 100; 4 ≤ <i>L</i> ≤ 20 000).</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">If it is impossible to organize a cycle of required length, output “Unsuitable device”.
+Otherwise, output “Overwhelming power of magic” in the first line.
+In each of the following <i>L</i> lines give two integers in the range from 1 to <i>n</i>,
+which are the coordinates of the grid nodes through which energy should pass.
+The distances between two consecutive nodes and between the first and the last nodes must be equal to&nbsp;1.
+The energy mustn't pass more than once through the same node, because this may produce unpredictable and, most likely, lethal effects.</div></div><h3 class="problem_subtitle">Samples</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">2 6
+</pre></td><td><pre class="intable">Unsuitable device
+</pre></td></tr><tr><td><pre class="intable">3 6
+</pre></td><td><pre class="intable">Overwhelming power of magic
+1 1
+2 1
+3 1
+3 2
+2 2
+1 2
+</pre></td></tr></tbody></table><div class="problem_source"><b>Problem Author: </b>Alexey Samsonov (prepared by Dmitry Ivankov)<br><b>Problem Source: </b>NEERC 2012, Eastern subregional contest<br><br></div></div></div><script type="text/javascript" async="" src="watch.js"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript>&lt;div&gt;&lt;img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/&gt;&lt;/div&gt;</noscript><iframe name="RemoteIframe" allowtransparency="true" style="position: absolute; left: -999px; top: -999px; width: 1px; height: 1px;"></iframe></body></html>

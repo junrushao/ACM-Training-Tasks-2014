@@ -1,0 +1,357 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/3753/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="HDOJ ACM ICPC OJ C C++ Pascal Java" name="keywords"><style type="text/css">body
+{
+	font-size:14px;
+	font-family:Times New Roman;
+	background: url(background.jpg);
+}
+
+a{ color:#1a5cc8; text-decoration:none }
+a:hover { color:orange; text-decoration:underline }
+textarea { border:#879BFF 1px dashed; background-color: F4FBFF }
+input { border:#879BFF 1px dashed; font-size:14px; background-color:transparent; vertical-align: middle }
+select { margin: -2px; background-color:F4FBFF }
+img { border: none}
+hr { height: 1px; border: 0; border-top: #1a5cc8 1px dashed }
+h1 { color: #1A5CC8; text-align: center }
+
+.text40{ width: 54px; height:22px }
+.text60{ width: 80px; height:22px }
+.text90{ width: 90px; height:22px }
+.button40{ width: 54px; height:24px; background-color:F4FBFF; font-family:Tahoma; font-size:12px }
+.footer_link{ font-family: Arial; font-size:12px; font-weight:bold; color:#1a5cc8 }
+.banner{ font-family: Arial; font-weight: bold; font-size: 18px; color: #FFFFFF }
+.hot {color:red }
+.pagerunstatus { font-family:Arial;font-size:11px;color:green}
+.table_header { font-family: Arial; font-weight: bold; font-size:12px; color: #ffffff; background-color:#1a5cc8; text-align:center }
+.table_text { font-family: Tahoma; font-size:12px}
+.code {word-wrap: break-word; word-break:break-all; background-color:#f4fbff; border:#b7cbff 1px dashed; font-size:12px; font-family: Courier New, Courier; text-align:left; padding:10px}
+.fixedsize { word-wrap:break-word; word-break:break-all }
+
+#contest_nav { word-wrap:break-word; width:980px; border:1px solid #1a5cc8; background-color:#1a5cc8; line-height:32px}
+#contest_nav a { font-family: Arial; font-weight: bold; font-size: 18px; color: #FFFFFF; margin: 15px }
+#contest_nav a:hover { font-family: Arial; font-weight: bold; font-size: 18px; color:orange; margin: 15px }
+#contest_footer { width:980px; height:70px; border:1px solid #1a5cc8; text-align:center; padding: 5px 0}
+#contest_footer div{ word-wrap:break-word }
+#rollword { word-wrap:break-word; width:980px; margin-top:10px}
+
+/* Panel对象的css */
+div.panel_content {
+	height: auto;
+	background: url(panel-content.png) repeat-y;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 14px;
+	font-family: Times New Roman;
+	text-align: left
+}
+div.panel_title {
+	height: 38px;
+	background: transparent url(panel-title.png) left bottom no-repeat;
+	padding: 0 14px;
+	color: #7CA9ED;
+	font-size: 18px;
+	font-family: Arial;
+	font-weight: bold
+}
+div.panel_bottom {
+	height: auto;
+	margin: 0;
+	background: url(panel-bottom.png) left top no-repeat
+}
+div.panel_content pre {
+	margin: 0;
+	font-size: 14px
+}
+/* 高亮显示的项 */
+#highlight_item{
+	light:expression(onmouseover=function(){this.style.backgroundColor="#D7EBFF"},onmouseout=function(){this.style.backgroundColor="transparent"}) 
+}
+
+</style><style type="text/css">
+#content{
+	height:auto!important;
+	height:120px;
+	min-height:120px; 
+	font-size:16px;
+	margin:0 auto 20px auto;
+	width:100%;
+	
+}
+#maintable{
+	text-align:center;
+	font-size:14px;
+	width:100%;
+	margin:10px auto;
+	
+}
+#maintable tr{
+	height:19px;
+}
+.tbheader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:16px;
+	background-color:#1a5cc8;
+	color:white;
+}
+.tbheader a{
+	color:white;
+}
+ .contype{
+	font-size:14px;
+	margin:10px auto;
+	text-align:center;
+}
+.ctpublic{
+	color:red;
+}
+.ctprivate{
+	color:green;
+}
+.cspend{
+	color:green;
+}
+.csend{
+	color:gray;
+}
+.csrun{
+	color:red;
+}
+#content h4{
+	font-weight:normal;
+	margin:3px auto 0;
+	text-align:center;
+	color:#1a5cc8;
+	font-size:14px;
+}
+#content h2{
+	margin:5px auto;
+	text-align:center;
+	font-size:18px;
+}
+#content #errormsg{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	width:100%;
+	color:red;
+	text-align:center;
+	margin:5px auto;
+	padding:0;
+}
+
+/*DIY Contest 的相关表单*/
+#content #mkcon{
+	width:68%;
+	margin:20px auto 0 200px;
+
+}
+#content #mkcon p{
+	margin:10px auto;
+}
+#content #mkcon .timeinfo input{
+	width:40px;
+}
+#content #mkcon .timeinfo span{
+	border:#b7cbff 1px dashed;
+}
+#content #mkcon #diyconname{
+	width:414px;
+	margin-left:11px;
+}
+#content #mkcon #diyyear{
+	margin-left:36px;
+}
+#content #mkcon #diylday{
+	margin-left:21px;
+}
+#content #contesttype{
+	margin-left:16px;
+	border:none;
+}
+#content #contesttype2{
+	margin-left:16px;
+	border:none;
+}
+
+#content #mkcon #password{
+	margin-left:33px;
+	width:152px;
+}
+#content #mkpro{
+	width:50%;
+	margin:20px auto 20px 310px;
+}
+#content #mkpro h1{
+	font-size:16px;
+}
+#content #mkpro p{
+	text-align:center;
+}
+#content #mkpro #diyspid{
+	margin-left:40px;
+	width:40px;
+}
+#content #mkpro #diytpid{
+	margin-left:85px;
+	width:40px;
+}
+#content #mknotice{
+	margin:auto;
+	width:100%;
+	height:100px;
+}</style><style type="text/css">
+#content{
+	height:auto!important;
+	height:120px;
+	min-height:120px; 
+	font-size:16px;
+	margin:0 auto 20px auto;
+	width:100%;
+	
+}
+#maintable{
+	text-align:center;
+	font-size:14px;
+	width:100%;
+	margin:10px auto;
+	
+}
+#maintable tr{
+	height:19px;
+}
+.tbheader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:16px;
+	background-color:#1a5cc8;
+	color:white;
+}
+.tbheader a{
+	color:white;
+}
+ .contype{
+	font-size:14px;
+	margin:10px auto;
+	text-align:center;
+}
+.ctpublic{
+	color:red;
+}
+.ctprivate{
+	color:green;
+}
+.cspend{
+	color:green;
+}
+.csend{
+	color:gray;
+}
+.csrun{
+	color:red;
+}
+#content h4{
+	font-weight:normal;
+	margin:3px auto 0;
+	text-align:center;
+	color:#1a5cc8;
+	font-size:14px;
+}
+#content h2{
+	margin:5px auto;
+	text-align:center;
+	font-size:18px;
+}
+#content #errormsg{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	width:100%;
+	color:red;
+	text-align:center;
+	margin:5px auto;
+	padding:0;
+}
+
+/*WEB Contest 的相关表单*/
+#content #mkcon{
+	width:68%;
+	margin:20px auto 0 200px;
+
+}
+#content #mkcon p{
+	margin:10px auto;
+}
+#content #mkcon .timeinfo input{
+	width:40px;
+}
+#content #mkcon .timeinfo span{
+	border:#b7cbff 1px dashed;
+}
+#content #mkcon #webconname{
+	width:414px;
+	margin-left:11px;
+}
+#content #mkcon #webyear{
+	margin-left:36px;
+}
+#content #mkcon #weblday{
+	margin-left:21px;
+}
+#content #contesttype{
+	margin-left:16px;
+	border:none;
+}
+#content #contesttype2{
+	margin-left:16px;
+	border:none;
+}
+
+#content #mkcon #password{
+	margin-left:33px;
+	width:152px;
+}
+#content #mkpro{
+	width:50%;
+	margin:20px auto 20px 310px;
+}
+#content #mkpro h1{
+	font-size:16px;
+}
+#content #mkpro p{
+	text-align:center;
+}
+#content #mkpro #webspid{
+	margin-left:0px;
+	width:80px;
+}
+
+#content #mknotice{
+	margin:auto;
+	width:100%;
+	height:100px;
+}
+</style><style type="text/css"></style></head><body>
+<a name="top"></a>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="word-wrap:break-word">
+
+
+
+<tbody><tr><td align="center"><h1 style="color:#1A5CC8">Gift Hunting</h1><font><b><span style="font-family:Arial;font-size:12px;font-weight:bold;color:green">Time Limit: 6000/3000 MS (Java/Others), Memory Limit: 32768/32768 K (Java/Others)</span></b></font><br><br><div align="left" class="panel_title">Problem Description</div> <div class="panel_content">After winning two coupons for the largest shopping mart in your city, you can't wait inviting your girlfriend for gift hunting. Having inspected hundreds of kinds of souvenirs, toys and cosmetics, you finally narrowed down the candidate list to only <i>n</i> gifts, numbered 1 to <i>n</i>. Each gift has a happiness value that measures how happy your girlfriend would be, if you get this gift for her. Some of them are special - you <b>must</b> get it for your girlfriend (note that whether a gift is special has nothing to do with its happiness value).<br><br>Coupon 1 can be used to buy gifts with total price not greater than <i>V</i>1 (RMB). Like most other coupons, you <b>can’t</b> get any money back if the total price is strictly smaller than <i>V</i>1. Coupon 2 is almost the same, except that it’s worth <i>V</i>2. Coupons should be used separately. That means you cannot combine them into a super-coupon that’s worth <i>V</i>1+<i>V</i>2. You have to divide the gifts you choose into two part, one uses coupon 1, the other uses coupon 2.<br><br>It is your girlfriend's birthday today. According to the rules of the mart, she can take one (only one) gift for FREE! Here comes your challenge: how to make your girlfriend as happy as possible?</div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Input</div> <div class="panel_content">There will be at most 20 test cases. Each case begins with 3 integers <i>V</i>1, <i>V</i>2 and <i>n</i> (1 &lt;= <i>V</i>1 &lt;= 500, 1 &lt;= <i>V</i>2 &lt;= 50, 1 &lt;= <i>n</i> &lt;= 300), the values of coupon 1 and coupon 2 respectively, and the number of candidate gifts. Each of the following <i>n</i> lines describes a gift with 3 integers: <i>P</i>, <i>H</i> and <i>S</i>, where <i>P</i> is the price, <i>H</i> is the happiness (1 &lt;= <i>P,H</i> &lt;= 1000), <i>S</i>=1 if and only if this is a special gift - you must buy it (or get it for free). Otherwise <i>S</i>=0. The last test case is followed by <i>V</i>1 = <i>V</i>2 = <i>n</i> = 0, which should not be processed.</div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Output</div> <div class="panel_content">For each test case, print the case number and the maximal total happiness of your girlfriend. If you can't finish the task, i.e. you are not able to buy all special gifts even with the 1-FREE bonus, the happiness is -1 (negative happiness means she's unhappy). Print a blank line after the output of each test case.<br></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Sample Input</div><div class="panel_content"><pre><div style="font-family:Courier New,Courier,monospace;">3 2 4
+3 10 1
+2 10 0
+5 100 0
+5 80 0
+3 2 4
+3 10 1
+2 10 0
+5 100 0
+5 80 1
+0 0 0</div></pre></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Sample Output</div><div class="panel_content"><pre><div style="font-family:Courier New,Courier,monospace;">Case 1: 120
+
+Case 2: 100</div></pre></div><div class="panel_bottom">&nbsp;</div><br>  <br> <br></td></tr>
+</tbody></table>
+
+</body></html>

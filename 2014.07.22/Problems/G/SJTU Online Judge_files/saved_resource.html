@@ -1,0 +1,63 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1977/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+Xi, a developmental biologist is working on developmental distances 
+of chromosomes. A chromosome, in the Xi's simplistic view, is a 
+permutation from <span class="MATH"><i>n</i></span> genes numbered 1 to <span class="MATH"><i>n</i></span>. Xi is working on an 
+evolutionary distance metric between two chromosomes. In Xi's theory 
+of evolution any subset of genes lying together in both chromosomes 
+is a positive witness for chromosomes to be similar. 
+
+</p><p>
+A positive witness is a pair of sequence of the same length <span class="MATH"><i>A</i></span> and <span class="MATH"><i>A'</i></span>, 
+where <span class="MATH"><i>A</i></span> is a consecutive subsequence of the first chromosome, <span class="MATH"><i>A'</i></span> is a 
+consecutive subsequence of the second chromosome, and <span class="MATH"><i>A</i></span> is a 
+permutation of <span class="MATH"><i>A'</i></span>. The goal is to count the number of positive 
+witnesses of two given chromosomes that have a length greater than one.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+There are several test case in the input. Each test case starts 
+with a line containing the number of genes <!-- MATH
+ $(2 \le n \le 3000)$
+ -->
+<span class="MATH">(2<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5052img1.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5052img1.png" width="18">3000)</span>. 
+The next two lines contain the two chromosomes, each as a list of 
+positive integers. The input terminates with a line containing 
+``<tt>0</tt>'' which should not be processed as a test case.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For each test case, output a single line containing the number of 
+positive witness for two chromosomes to be similar. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>4 
+3 2 1 4 
+1 2 4 3 
+5 
+3 2 1 5 4
+3 2 1 5 4
+0
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3 
+10
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

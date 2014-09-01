@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0048)http://172.16.45.6/contests/1003/problem-J/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1871. Seismic Waves @ Timus Online Judge</title></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1871. Seismic Waves</h2><div class="problem_limits">Time limit: 1.0 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_right"><i>In case of fire, exit building before tweeting about it.</i></div></div><div class="problem_par"><div class="problem_par_normal">Nobody is surprised nowadays hearing a story about someone writing to a blog or a social network 
+about an accident before calling the rescue service. Knowing this attachment to internet technologies, 
+the Japanese authorities suggest people to use Twitter to alert their friends and relatives about an earthquake.
+Indeed, since the propagation velocity of seismic waves is no more than five kilometers per second,
+people who are far enough from the epicenter will be able to read about the earthquake several seconds before 
+the wave hits them. These seconds may become crucial for some of them…</div></div><div class="problem_par"><div class="problem_par_normal">Each Twitter user has a list of <i> followers</i>. A tweet (message) of a user is seen by all of his followers. 
+Each of them can <i> retweet</i> this tweet. As a result, it will become available to all their followers. 
+These followers can in turn retweet the retweet, and so on…
+Retweet gets the string «RT @nick: » appended to its beginning, where
+<i>nick</i> is the name of the user whose tweet (or retweet) is retweeted.
+Since the length of a tweet must not exceed 140 symbols, any retweet violating this restriction 
+will not be sent.</div></div><div class="problem_par"><div class="problem_par_normal">The Japanese Fire and Disaster Management Agency wants to test the idea of Twitter alerts 
+by conducting an experiment. They have chosen a group of people and want to calculate how
+many of them will learn about an earthquake, if only person will be notified of it.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">The first line contains the number <i>n</i> of Twitter users chosen for the experiment (2 ≤ <i>n</i> ≤ 100). 
+The users are described in the next <i>n</i> lines in the following format: username, the number of followers, 
+and the list of their names. The lists of followers can only contain names of other users chosen for the experiment.
+The names are distinct nonempty strings of length at most 30, consisting of uppercase and lowercase English letters.
+The last line contains a tweet about an earthquake sent by the user whose name is the first in the input.
+The tweet is a nonempty string consisting of symbols with ASCII codes in the range
+from&nbsp;32 to&nbsp;127; the length of the string is at most 140 symbols.</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">In the first line output the number of users who will learn about the earthquake.
+Then output their names in any order, one name per line.</div></div><h3 class="problem_subtitle">Sample</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">5
+Miyako 1 Sae
+Yuno 2 Miyako Sae
+Nazuna 1 Nori
+Sae 1 Yuno
+Nori 1 Nazuna
+Hidamari is going to collapse!!!
+</pre></td><td><pre class="intable">3
+Miyako
+Sae
+Yuno
+</pre></td></tr></tbody></table><div class="problem_source"><b>Problem Author: </b>Dmitry Ivankov<br><b>Problem Source: </b>Open Ural FU Championship 2011<br><br></div></div></div><script type="text/javascript" async="" src="watch.js"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript>&lt;div&gt;&lt;img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/&gt;&lt;/div&gt;</noscript><div></div></body></html>

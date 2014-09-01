@@ -1,0 +1,150 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1974/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+A Seven Segment Display is generally a form for representing decimals 
+numbers 0 to 9, using exactly 7 segments. You may have already seen such 
+displays on price-list boards, like in exchange offices or fuel stations. 
+Using three of these displays together, with a proper underlying 
+electronic circuit, one can create a three digit display to show 
+number between 0 and 999 (inclusive), without leading zero. Our man, 
+Shelby, has already done this! Going further he has even made it to 
+work as a time counter - As each second passes the number in display 
+advances by one and when reaching 999, the next number is 0 (i.e. it 
+works as a cyclic counter). 
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p5049a.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p5049a.eps}" border="0" height="240" src="p5049a.png" width="404">
+</div>
+<p>
+Shelby is a technician in a company. There is one of those three-digit seven 
+segment display (working as a counter) hanging on Shelby's office wall. 
+Shelby is asked to write the displaying number of the counter on a piece 
+of paper, everyday at 15:00:00 that is the time he leaves the company. 
+It has some security reasons and is requested by the big boss! 
+
+</p><p>
+Unfortunately, yesterday Shelby forgot to write the number and he is too 
+anxious now! As a matter of luck he has found some images taken by various 
+surveillance cameras taken at 15:00:00 or later. But the problem is that, 
+the state (either on or off) of some of the 21 segments (in three seven 
+segments) are not visible in the photos clearly! 
+
+</p><p>
+Given the photos, each containing information about those 21 segments 
+(either visible and on, or visible and off, or not-visible in this 
+certain photo), and the time the photos is taken, you are asked to help 
+Shelby to find out the number of the counter at 15:00:00.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+The input consists of several test cases, each containing some photos 
+(at least one and at most 20). Each photo is shown in 6 lines. The 
+first line has a single non-negative integer, less than or equal to 
+61200, indicating the number of seconds passed since 15:00:00. Then, 
+in the following 5 lines the photo is drawn. If all the 21 segments 
+of the photo are visible and on (value equals to 888), then the following 
+characters will make the five lines containing space, dash (minus), 
+and vertical bar characters: 
+
+</p><p>
+</p><p>
+<br>
+</p><pre> -  -  -
+| || || | 
+ -  -  -
+| || || | 
+ -  -  -
+</pre>
+<p>
+</p><p>
+<br>
+Otherwise, for any segment (of these 21) that is visible but is off, a 
+dot character (<code>.</code>) is written instead of `<code>-</code>' or `<code>|</code>'. 
+For those segments which are not visible, an asterisk character 
+(<code>*</code>) is put. You can assume that the digits 0 to 9 are supposed 
+to be displayed like this in a clear photo: 
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p5049b.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p5049b.eps}" border="0" height="351" src="p5049b.png" width="742">
+</div>
+<p>
+The test cases in the input are separated by a line containing a single 
+`<code>#</code>' sign. The last line of the input contains a single `<code>$</code>' sign. 
+
+</p><p>
+There are not any leading spaces but trailing spaces might occur. Thus, 
+every line has at least (and not exactly) 9 characters in length. 
+Remember the numbers in counter does not contain leading zeros. For 
+example, the value 70 is shown as 7 on the second digit from the 
+left and 0 on the third digit from the left. The leftmost digit 
+is all-off (it is not 070).
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For every test case, if it is possible to find out the value of counter 
+at 15:00:00, then find it and write it in the output. Otherwise, write 
+a question mark (<tt>?</tt>) first, then a space followed by the number of 
+different possible values the counter may have had at 15:00:00. 
+Separate the question mark and the number by one blank character. 
+If it is an impossible case and the photos are contradicting with 
+each other, you should write ``<tt>? 0</tt>" in the output.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>1 
+ -  -  -
+| || || | 
+ -  -  -
+| || || | 
+ -  -  -
+# 
+0 
+ *  *  -
+* ** *| | 
+ *  *  - 
+* ** *. | 
+ *  *  - 
+1 
+ .  .  * 
+. |. |* * 
+ .  .  * 
+. |. |* * 
+ .  .  * 
+#
+6120 
+ -  -  -
+| || || * 
+ -  *  -
+* || || | 
+ -  -  - 
+$
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>887 
+109 
+? 8�
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

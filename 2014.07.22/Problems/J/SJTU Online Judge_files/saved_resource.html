@@ -1,0 +1,131 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1980/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+Flatland is a 2-dimensional world in which some creatures have an 
+odd miserable life. Despite the many handicaps, the poor creatures 
+have recently achieved the wireless technology in Flatland. So, the 
+priest circles (governors of Flatland who kill the apostles of 3D 
+as soon as they see one) created the national motto ``<span class="textit">Wireless 
+technology is our indisputable right!</span>" and organized a wireless  
+spreading committee for connecting all important points of the 
+Flatland by wireless antennas. 
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p5055a.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p5055a.eps}" border="0" height="188" src="p5055a.png" width="363">
+</div>
+<p>
+Everything went well until the committee reached the mountainous 
+region of Flatland. This region can be modeled with a horizontal 
+<span class="textit">base line</span> covered by a contiguous serie of mountain. Each mountain 
+is a right-angled isosceles triangle with its base on the 
+<span class="textit">base line</span> and its right angle as the peak. Currently, there 
+are only two types of mountains in this region: those with a height 
+of 50, and those with a height of 100. You can see a sample of the 
+mountainous region in the figure below. 
+
+</p><p>
+The wireless spreading comitte first installed their antennas on the 
+points they had already planned for the mountainous region. But in 
+the end, they found out that a pair of antennas could directly 
+communicate only if the line segment connecting the two antennas had no 
+crossing intersection with any obstacles -- specifically the mountains 
+here. Note that two antennas <span class="textit">can</span> communicate if
+<span class="textit">only the border</span> of obstacles is on their connecting line 
+segment. 
+
+</p><p>
+Since removing a wireless antenna in Flatland is nowadays as a deadly 
+sin as ``chromatization'', the only way to connect the set of already 
+installed antennas is to install some extra antennas on the appropriate 
+points of the mountains! Wireless antennas can generally relay the 
+messages and connect to ones which cannot communicate directly. In 
+order to reduce the expenses of installing extra antennas, the 
+wireless spreading committee has hired you to find the minimum number 
+of antennas needed to install. 
+
+</p><p>
+For example, consider the 4 diamond-shaped points in the figure below 
+as the place of the wireless antennas already installed on the 
+mountains. Now the whole set becomes connected if you instal 3 new 
+antennas in the places specified by the circle-shaped points. 
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p5055b.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p5055b.eps}" border="0" height="227" src="p5055b.png" width="1152">
+</div>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+There are multiple test cases in the input. Each test case starts 
+with a line containing the integer <span class="MATH"><i>n</i></span> <!-- MATH
+ $(1 \le n \le 500)$
+ -->
+<span class="MATH">(1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5055img3.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5055img3.png" width="18">500)</span>, the number of 
+mountains, followed by the integer <span class="MATH"><i>m</i></span> <!-- MATH
+ $(1 \le m \le 10000)$
+ -->
+<span class="MATH">(1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5055img3.png" width="18"><i>m</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5055img3.png" width="18">10000)</span>, the number of 
+already installed antennas. The second line contains <span class="MATH"><i>n</i></span> integers 
+<!-- MATH
+ $h_{1}, h_{2} , \dots, h_{n}$
+ -->
+<span class="MATH"><i>h</i><sub>1</sub>, <i>h</i><sub>2</sub>,..., <i>h</i><sub>n</sub></span> <!-- MATH
+ $(h_{i} \in \{50, 100\})$
+ -->
+<span class="MATH">(<i>h</i><sub>i</sub> <img align="MIDDLE" alt="$ \in$" border="0" height="31" src="5055img4.png" width="16"> {50, 100})</span>, respectively 
+representing the height of the mountains on the <span class="textit">base line</span> from left to right. 
+The third (last) line of the test case contains <span class="MATH"><i>m</i></span> integers 
+specifying the position of the antennas already installed on the 
+mountains. The position of each antenna is specified by its X 
+coordinate, assuming the left-most point of the left-most mountain 
+being the origin of the coordinate system. You yourself can calculate 
+the Y coordinate of antenna as it is put on the boundaries of a 
+mountain. 
+
+</p><p>
+The input terminates with a line of the form ``<tt>0 0</tt>" which should 
+not be processed as a test case.
+
+</p><p>
+</p><p>
+<br>
+<span class="textbf">Note:</span> The Sample Input test case is related to the configuration illustrated in the above figure.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For each test case, write a single line containing the minimum number 
+of extra wireless antennas needed for making the given set of antennas 
+connected.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>5 4 
+100 50 50 100 50 
+50 220 290 625 
+0 0
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

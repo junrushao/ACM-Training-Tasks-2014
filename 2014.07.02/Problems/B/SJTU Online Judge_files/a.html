@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1821. Biathlon @ Timus Online Judge</title></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1821. Biathlon</h2><div class="problem_limits">Time limit: 0.5 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_normal">In a biathlon race with staggered starts the contestants start by turns with an 
+interval of 30 seconds, that is why the contestant who finished first is not 
+necessarily the first in the final results table. For example, if a biathlete 
+who started second came to the finish 25 seconds later than the biathlete who 
+started first, then she ran the race 5 seconds faster and would be placed 
+higher in the results table.</div></div><div class="problem_par"><div class="problem_par_normal">Only three years remain until the 2014 Winter Olympic Games, which will be held 
+in the city of Yekaterinozavodsk. A new biathlon course is almost complete, and 
+the shooting range and stands have already been built.</div></div><div class="problem_par"><div class="problem_par_normal">It is planned to mount an electronic scoreboard near the stands. During a race 
+the scoreboard will show the name of the contestant with the current best 
+result. You are asked to write a program to determine such a contestant. You 
+have taken the final protocol of the recent Biathlon World Championships as 
+initial data for testing your program. The protocol contains the names of 
+biathletes and their running times. The names are given in the order of starts. 
+To verify the correctness of the program, you should find all contestants whose 
+names must appear on the scoreboard.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">The first line contains the number of biathletes participating in the race <i>n</i> 
+(1 ≤ <i>n</i> ≤ 100). In the <i>i</i>-th of the following <i>n</i> lines you are given 
+the name of the contestant who was <i>i</i>-th to start and, after a space, the 
+contestant's running time in the format “mm:ss.d” given with an accuracy of 
+tenths of a second. It is guaranteed that no two contestants finished 
+simultaneously and no two contestants showed the same result. The name of a 
+biathlete is a nonempty string consisting of English letters of length at 
+most 20. The first letter of a name is capital and the other letters are small. 
+The names of all the contestants are different.</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">In the first line output the number of biathletes who were leaders of the race 
+immediately after their finish. Then output the names of these contestants in 
+the lexicographic order, one per line.</div></div><h3 class="problem_subtitle">Sample</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">6
+Zaitseva 21:38.2
+Hauswald 21:21.0
+Boulygina 22:04.4
+Henkel 22:06.1
+Wilhelm 21:11.1
+Jonsson 22:05.8
+</pre></td><td><pre class="intable">3
+Hauswald
+Wilhelm
+Zaitseva
+</pre></td></tr></tbody></table><div class="problem_source"><b>Problem Author: </b>Alexander Ipatov, Alex Samsonov<br><b>Problem Source: </b>XII USU Open Personal Contest (March 19, 2011)<br><br></div></div></div><script src="a_data/watch.js" async="" type="text/javascript"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/></div></noscript><iframe name="RemoteIframe" allowtransparency="true" style="position: absolute; left: -999px; top: -999px; width: 1px; height: 1px;"></iframe></body></html>

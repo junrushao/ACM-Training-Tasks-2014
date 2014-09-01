@@ -1,0 +1,131 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1979/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+Killbots is a simple game of evading killer robots. Who created the 
+robots and why they have been programmed to destroy, no one knows. 
+All that is know is that the robots are numerous and their sole 
+objective is to destroy everything on their way. Fortunately, their 
+creator focused on quantity rather than quality and as a result the 
+robots are severely lacking in intelligence. Killbots is a turn-based 
+game, played on a rectangular <span class="textit">grid</span>. Each cell can contain one of the 
+following: 
+
+</p><p>
+</p><dl>
+<dt><strong><span class="textbf">Hero</span> (<code>@</code>)</strong></dt>
+<dd>- The hero is the unfortunate soul stuck in a room with a 
+bunch of killler robots. In the original Killbots game, the player 
+controls the hero by moving it around the grid. But in this problem, 
+it is assumed that the hero stays at his place and does not move at all. 
+Instead, it can destroy any robot trying to come to its cell. 
+</dd>
+<dt><strong><span class="textbf">Robot</span> (<code>+</code>)</strong></dt>
+<dd>- Robots are mechanical thugs desiring on to crush the hero 
+with the metallic girth. They have never heard of the ``Three Laws of 
+Robotics" and would probably crush anyone who tried to explain them. 
+Each robot will take a single step toward the hero on every turn. If 
+the robot is in the same row or the same column as the hero, it will 
+step directly towards the robot. Otherwise, it will take the diagonal 
+step that makes it as closer to the hero. 
+</dd>
+<dt><strong><span class="textbf">Fastbot</span> (<tt>#</tt>)</strong></dt>
+<dd>- <span class="textit"><span class="textbf">Fastbots</span></span> are a much speedier 
+version of the basic robot. For each move a robot makes, they take two steps. Fortunately, 
+their increased mobility was not paired with increased intelligence; 
+they often only succeed in destroying themselves twice as quickly as 
+their slower brethren. 
+</dd>
+<dt><strong><span class="textbf">Junkheap</span> (<code>*</code>)</strong></dt>
+<dd>- When two or more robot or fastbots collide, they are 
+destroyed and the resulting debris produces a junkheap. Robots or 
+fastbots blindly ignore any junkheaps in their path and are destroyed 
+upon crashing into them. 
+</dd>
+</dl>
+<p>
+</p><p>
+<br>
+The following figure is an example of how the game works. The cell E5 
+is where the hero stands. The cells containing junkheap are marked 
+with `<code>*</code>'. Robots and fastbots are shown with `<code>+</code>' and `<code>#</code>' respectively. 
+If we start from the grid on the left, the robots at B5 an E4 take 
+direct steps directly towards the hero (to the right and down 
+respectively). The latter is destroyed by the hero. The one at B8 takes 
+an up-right step to C7. The robot at H6 takes an up-left step to G5 
+where it crashes into junkheap and is destroyed. The robot at F7 toes 
+to E6 (where it will be destroyed in the next step by the fastbot 
+initially at G8. Note that all robots and fastbots move simultaneously 
+so at the same time F7 moves to E6, the fastbot at G8 move to F7, 
+without collision. After a turn that all robots a fastbots move, the 
+fastbots move another step while the robots stay. So, the fastbot at 
+F7 moves to E6 crashing into the robot staying there. They are both 
+destroyed leaving junkheap at E6. The game continue until all robots 
+and fastbots are destroyed either by the hero, or crashing into other 
+robots or junkheap. 
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p5054.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p5054.eps}" border="0" height="314" src="p5054.png" width="750">
+</div>
+<p>
+The goal of this problem is count the number of robots and fastbots 
+destroyed by the hero. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+There are multiple test-case in the input each specifying a game grid. 
+Each test case contains several lines of the same length. Each line 
+describes a row of the grid, and each character of the line is a cell 
+of the grid. Empty cells are marked by `<code>.</code>', and non-empty cells are 
+marked by the special characters described in the problem description. 
+Af each test-case, there is a line in the input containing a 
+single `<code>$</code>' character. You may assume there is one and only one cell 
+in the input containing `<code>@</code>'. Each side of the grid has at least one 
+and at most 1000 cells.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For each test case, write a single line containing the number of 
+fastbots and robots destroyed by the hero when the game ends 
+(after all robots and fastbots are destroyed).
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>...*.... 
+.......# 
+.....*.. 
+....+... 
+.+..@.*. 
+.......+ 
+.*...+.. 
+.+....#. 
+$ 
+... 
+..@ 
+.*. 
+.+. 
+$
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>4 
+1
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

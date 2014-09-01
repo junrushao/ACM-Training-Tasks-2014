@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0038)http://172.16.45.6/problems/8204/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="20918869"></script><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1916. Titan Ruins: Waiting for Stability @ Timus Online Judge</title><style type="text/css"></style></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1916. Titan Ruins: Waiting for Stability</h2><div class="problem_limits">Time limit: 1.0 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_normal">`Things are going from bad to worse,' Soren said when he and Alba entered a
+room with painfully familiar coins.  This time something was a bit different.
+All the coins were arranged into neat stacks, and strange soft claps were heard
+from time to time. Soren felt that the coins contained magic power and some of
+them were unstable.  A slight impulse was enough to make such a coin transform
+into several new coins. Some of the new coins had no magic power and were
+absolutely stable, while others were unstable and could transform in
+the same manner.</div></div><div class="problem_par"><div class="problem_par_normal">Having studied the book lying on the table, Alba learned that there were only
+several types of unstable coins and that coins of the same type always
+transformed in the same way. When an unstable coin transformed all
+the coins above it were pushed up and placed on top of the new coins.</div></div><div class="problem_par"><div class="problem_par_normal">One of the walls had a vertical cavity exactly one coin wide. Soren conjectured
+that the door would open if the cavity was filled with a stack of coins.  But
+which coins? Alba and Soren understood that they couldn't put unstable coins
+into the cavity, because their transformations might cause unpredictable
+effects.  They decided to wait until one of the unstable coins turned into a
+stack of stable coins, take several consecutive coins from this stack, and put
+them into the cavity. But first they wanted to know the number of different
+ways to fill the cavity in this way.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">The first line contains the number <i>n</i> of coin types and the number <i>k</i> of coins in a stack that can fill the cavity (2 ≤ <i>n</i>, <i>k</i> ≤ 100). The <i>i</i>-th of the following lines describes the <i>i</i>-th type of coins.
+If the type is stable, the line contains the number&nbsp;−1. Otherwise, the line starts with the number
+<i>k</i><sub><i>i</i></sub> of coins into which a coin of type&nbsp;<i>i</i> transforms. After this number, there are <i>k</i><sub><i>i</i></sub> integers <i>x</i><sub><i>ij</i></sub>,
+which describe the appearing stack (1 ≤ <i>k</i><sub><i>i</i></sub> ≤ 100; 1 ≤ <i>x</i><sub><i>ij</i></sub> ≤ <i>n</i>).
+The integers <i>x</i><sub><i>ij</i></sub> are the types of coins in this stack from bottom to top.
+The sum of all <i>k</i><sub><i>i</i></sub> does not exceed&nbsp;100.
+It is guaranteed that any unstable coin will eventually transform into a stack of
+stable coins.</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">Output the remainder in division of the number of different suitable parts of
+stacks by 10<sup>9</sup> + 7.</div></div><h3 class="problem_subtitle">Sample</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">7 3
+3 3 2 2
+3 4 5 5
+1 7
+-1
+-1
+3 7 7 7
+-1
+</pre></td><td><pre class="intable">5
+</pre></td></tr></tbody></table><h3 class="problem_subtitle">Hint</h3><div class="problem_par"><div class="problem_par_normal">A coin of type&nbsp;3 produces one coin of type&nbsp;7.
+A coin of type&nbsp;2 produces a stack 4-5-5.
+From a coin of type&nbsp;1, in the end we obtain a stack 7-4-5-5-4-5-5,
+and a coin of type&nbsp;6 produces a stack 7-7-7.
+Therefore, all possible parts of stacks of height&nbsp;3 are 7-7-7, 4-5-5, 7-4-5, 5-5-4, and 5-4-5.</div></div><div class="problem_source"><b>Problem Author: </b>Ivan Burmistrov (prepared by Dmitry Ivankov)<br><b>Problem Source: </b>NEERC 2012, Eastern subregional contest<br><br></div></div></div><script type="text/javascript" async="" src="watch.js"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript>&lt;div&gt;&lt;img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/&gt;&lt;/div&gt;</noscript></body></html>

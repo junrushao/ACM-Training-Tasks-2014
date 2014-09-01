@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ui-mobile" style=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><!-- base href="http://172.16.45.6/problems/detail/5408/" -->
+	<title>SJTU Online Judge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="projection,screen" href="SJTU%20Online%20Judge_files/jquery_002.css">
+	<link rel="stylesheet" media="projection,screen" href="SJTU%20Online%20Judge_files/jquery.css">
+	<link rel="stylesheet" media="projection,screen" href="SJTU%20Online%20Judge_files/screen.css">
+	<script src="SJTU%20Online%20Judge_files/pdfobject.js"></script>
+	<script src="SJTU%20Online%20Judge_files/countdown.js"></script>
+	<script src="SJTU%20Online%20Judge_files/Modernizr.js"></script>
+	<script src="SJTU%20Online%20Judge_files/require-jquery.js" data-main="/static/js/main.js"></script><script src="SJTU%20Online%20Judge_files/main.js" data-requiremodule="main" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/bootstrap.js" data-requiremodule="judge/bootstrap" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/jquery.js" data-requiremodule="jquery.mobile" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/StandingsController.js" data-requiremodule="judge/controllers/StandingsController" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/NotificationService.js" data-requiremodule="judge/NotificationService" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/EditProblemsController.js" data-requiremodule="judge/controllers/EditProblemsController" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/ProblemQuickSearchController.js" data-requiremodule="judge/controllers/ProblemQuickSearchController" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script>
+<script src="SJTU%20Online%20Judge_files/Standings.js" data-requiremodule="judge/models/Standings" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/StandingsRenderer.js" data-requiremodule="judge/renderers/StandingsRenderer" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="SJTU%20Online%20Judge_files/utils.js" data-requiremodule="judge/utils" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script></head>
+
+<body class="ui-mobile-viewport ui-overlay-d" style="">
+	<div style="min-height: 708px;" tabindex="0" data-url="/contests/991/" data-role="page" data-theme="d" class="page-contest-detail ui-page ui-body-d ui-page-panel">
+		<!-- Panels -->
+		
+    
+		<!-- Navigation Panel -->
+		<div class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-panel-closed ui-body-c ui-panel-animate" data-role="panel" data-position="left" data-display="reveal" id="nav-panel">
+			<div class="ui-panel-inner"><ul class="ui-listview" data-role="listview">
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/">Home</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/news/list/">News</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/problems/">Problem Set</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/contests/list/">Contests</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/submissions/list/">Submissions</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="#">My Account</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-last-child" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/accounts/logout/?next=/contests/991/">Logout</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+
+            
+			</ul></div>
+		</div>
+		<!-- End Navigation Panel -->
+		
+		<!-- Login Panel -->
+		
+		<div class="ui-panel ui-panel-position-right ui-panel-display-reveal ui-panel-closed ui-body-c ui-panel-animate" data-role="panel" data-position="right" data-display="reveal" id="profile-panel">
+			<div class="ui-panel-inner"><h2>Profile</h2><table>
+				<tbody><tr><th>Name:</th><td>邵俊儒</td></tr>
+				<tr><th>Type:</th><td>Individual</td></tr>
+			</tbody></table><div class="ui-grid-a">
+				<div class="ui-block-a"><a class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="http://172.16.45.6/accounts/profile/" data-theme="b" data-role="button"><span class="ui-btn-inner"><span class="ui-btn-text">Edit</span></span></a></div>
+				<div class="ui-block-b"><a class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all" data-theme="d" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" data-role="button" href="http://172.16.45.6/accounts/logout/?next=/contests/991/" data-ajax="false"><span class="ui-btn-inner"><span class="ui-btn-text">Logout</span></span></a></div>
+			</div></div>
+			
+			
+		</div>
+		
+		<!-- End Login Panel -->
+		
+    
+
+		<!-- End Panels -->
+		
+		
+		<!-- Header -->
+		<div class="ui-panel-content-wrap ui-body-d ui-panel-animate ui-panel-content-wrap-closed"><header role="banner" class="ui-header ui-bar-b" data-role="header" data-theme="b">
+		
+	<h1 aria-level="1" role="heading" class="ui-title">Contest Detail</h1>
+
+		
+		
+		
+			<a title="" data-theme="b" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="#nav-panel" data-role="button" data-icon="bars" data-iconpos="notext" class="ui-btn-left ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all ui-btn-icon-notext"><span class="ui-btn-inner"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-bars ui-icon-shadow">&nbsp;</span></span></a>
+		
+		
+		
+		
+    
+        
+			
+				<a data-theme="b" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="#profile-panel" data-role="button" class="ui-btn-right profile ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all"><span class="ui-btn-inner"><span class="ui-btn-text">Profile</span></span></a>
+			
+		
+    
+
+		</header><section role="main" class="ui-content" data-role="content">
+		
+
+		<!-- Begin nav -->
+		
+		<div class="global-nav">
+		<div class="ui-grid-d ui-responsive desktop-only">
+			<div class="ui-block-a"><a class="ui-link" href="http://172.16.45.6/">Homepage</a></div>
+			<div class="ui-block-b"><a class="ui-link" href="http://172.16.45.6/problems/">Problem Set</a></div>
+			<div class="ui-block-c"><a class="ui-link" href="http://172.16.45.6/contests/list/">Contests</a></div>
+			<div class="ui-block-d"><a class="ui-link" href="http://172.16.45.6/submissions/list/">Submissions</a></div>
+			<div class="ui-block-e">
+			
+				Welcome, 邵俊儒
+			
+			</div>
+		</div>
+		</div>
+		
+		<!-- End nav -->
+
+		<!-- Begin page-specific content -->
+		
+    
+        
+<div class="haspadding">
+	<h2>Training 2014.06.24 solo</h2>
+    <p>Current Time: <span class="js-contest-current-time" data-url="/contests/current-time/">20:06:38</span></p>
+	<nav class="desktop-only in-contest-nav">
+		<a href="http://172.16.45.6/contests/991/" class="link-dashboard ui-link">Dashboard</a>
+		
+		<a href="http://172.16.45.6/contests/991/submissions/" class="link-submissions ui-link">My Submissions</a>
+		<a href="http://172.16.45.6/contests/991/clarification/list/" class="link-clarifications ui-link">Clarifications</a>
+        
+		<a href="http://172.16.45.6/contests/991/standings/" class="link-standings ui-link" data-ajax="false">Standings</a>
+        
+	</nav>
+</div>
+
+		
+			<p><strong>Contest ended. These links will bring you to the Problem Set.</strong></p>
+		
+        <div class="haspadding">
+            <table data-role="table" data-mode="table" class="ui-responsive table-stripe ui-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+						
+                        <th>Title</th>
+                        <th>Submit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+					
+						<td>
+						A
+						(<a class="ui-link" href="http://172.16.45.6/problems/detail/5408/">5408</a>)
+						</td>
+						
+						<td><a class="ui-link" href="http://172.16.45.6/problems/detail/5408/">Bullseye</a></td>
+						<td><a class="ui-link" href="http://172.16.45.6/problems/submit/5408/">Submit</a></td>
+					
+                    
+                    </tr><tr>
+					
+						<td>
+						B
+						(<a class="ui-link" href="http://172.16.45.6/problems/detail/5409/">5409</a>)
+						</td>
+						
+						<td><a class="ui-link" href="http://172.16.45.6/problems/detail/5409/">An Excel-lent Problem</a></td>
+						<td><a class="ui-link" href="http://172.16.45.6/problems/submit/5409/">Submit</a></td>
+					
+                    
+                    </tr><tr>
+					
+						<td>
+						C
+						(<a class="ui-link" href="http://172.16.45.6/problems/detail/5411/">5411</a>)
+						</td>
+						
+						<td><a class="ui-link" href="http://172.16.45.6/problems/detail/5411/">Flipping Pancake</a></td>
+						<td><a class="ui-link" href="http://172.16.45.6/problems/submit/5411/">Submit</a></td>
+					
+                    
+                    </tr><tr>
+					
+						<td>
+						D
+						(<a class="ui-link" href="http://172.16.45.6/problems/detail/5412/">5412</a>)
+						</td>
+						
+						<td><a class="ui-link" href="http://172.16.45.6/problems/detail/5412/">Model Rocket Height</a></td>
+						<td><a class="ui-link" href="http://172.16.45.6/problems/submit/5412/">Submit</a></td>
+					
+                    
+                    </tr><tr>
+					
+						<td>
+						E
+						(<a class="ui-link" href="http://172.16.45.6/problems/detail/5413/">5413</a>)
+						</td>
+						
+						<td><a class="ui-link" href="http://172.16.45.6/problems/detail/5413/">Region Filling</a></td>
+						<td><a class="ui-link" href="http://172.16.45.6/problems/submit/5413/">Submit</a></td>
+					
+                    
+                    </tr><tr>
+					
+						<td>
+						F
+						(<a class="ui-link" href="http://172.16.45.6/problems/detail/5415/">5415</a>)
+						</td>
+						
+						<td><a class="ui-link" href="http://172.16.45.6/problems/detail/5415/">Mr. Young's Picture Permutations</a></td>
+						<td><a class="ui-link" href="http://172.16.45.6/problems/submit/5415/">Submit</a></td>
+					
+                    
+                    </tr><tr>
+					
+						<td>
+						G
+						(<a class="ui-link" href="http://172.16.45.6/problems/detail/5414/">5414</a>)
+						</td>
+						
+						<td><a class="ui-link" href="http://172.16.45.6/problems/detail/5414/">Histology Assistant</a></td>
+						<td><a class="ui-link" href="http://172.16.45.6/problems/submit/5414/">Submit</a></td>
+					
+                    
+                </tr></tbody>
+            </table>
+        </div>
+        <ul class="info-list">
+			<li><strong>Start Time:</strong> 14-06-24 14:00</li>
+			<li><strong>End Time:</strong> 14-06-24 17:00</li>
+			<li><strong>Source:</strong> Greater New York 2004</li>
+        </ul>
+    
+
+		<!-- End page-specific content -->
+		</section><footer role="contentinfo" class="ui-footer ui-bar-a" data-role="footer" data-theme="">
+		
+			<p>Copyright © 2013 SJTU ACM-ICPC Team. All Rights Reserved.
+			<br>Any bug report or suggestion please send an email to sjtuojdev@gmail.com</p>
+		
+		</footer></div>
+		<!-- End Header -->
+		
+		
+		<!-- Content Section -->
+		
+		<!-- End Content Section -->
+		
+		
+		
+		
+		<!-- Service declarations -->
+		<div class="hidden js-service-declarations">
+		
+		
+		</div>
+	<div class="ui-panel-dismiss" data-panelid="nav-panel"></div><div class="ui-panel-dismiss" data-panelid="profile-panel"></div></div>
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div><div style="min-height: 708px;" tabindex="0" data-external-page="true" data-url="/problems/detail/5408/" data-role="page" data-theme="d" class="page-normal ui-page ui-body-d ui-page-panel ui-page-active">
+		<!-- Panels -->
+		
+
+		<!-- Navigation Panel -->
+		<div class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-panel-closed ui-body-c ui-panel-animate" data-role="panel" data-position="left" data-display="reveal" id="nav-panel">
+			<div class="ui-panel-inner"><ul class="ui-listview" data-role="listview">
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/">Home</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/news/list/">News</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/problems/">Problem Set</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/contests/list/">Contests</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/submissions/list/">Submissions</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="#">My Account</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+				<li class="ui-btn ui-btn-up-d ui-btn-icon-right ui-li-has-arrow ui-li ui-last-child" data-theme="d" data-iconpos="right" data-icon="arrow-r" data-wrapperels="div" data-iconshadow="true" data-shadow="false" data-corners="false"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+					<a class="ui-link-inherit" href="http://172.16.45.6/accounts/logout/?next=/problems/detail/5408/">Logout</a>
+				</div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+
+            
+			</ul></div>
+		</div>
+		<!-- End Navigation Panel -->
+		
+		<!-- Login Panel -->
+		
+		<div class="ui-panel ui-panel-position-right ui-panel-display-reveal ui-panel-closed ui-body-c ui-panel-animate" data-role="panel" data-position="right" data-display="reveal" id="profile-panel">
+			<div class="ui-panel-inner"><h2>Profile</h2><table>
+				<tbody><tr><th>Name:</th><td>邵俊儒</td></tr>
+				<tr><th>Type:</th><td>Individual</td></tr>
+			</tbody></table><div class="ui-grid-a">
+				<div class="ui-block-a"><a class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="http://172.16.45.6/accounts/profile/" data-theme="b" data-role="button"><span class="ui-btn-inner"><span class="ui-btn-text">Edit</span></span></a></div>
+				<div class="ui-block-b"><a class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all" data-theme="d" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" data-role="button" href="http://172.16.45.6/accounts/logout/?next=/problems/detail/5408/" data-ajax="false"><span class="ui-btn-inner"><span class="ui-btn-text">Logout</span></span></a></div>
+			</div></div>
+			
+			
+		</div>
+		
+		<!-- End Login Panel -->
+		
+
+
+		<!-- End Panels -->
+		
+		
+		<!-- Header -->
+		<div class="ui-panel-content-wrap ui-body-d ui-panel-animate ui-panel-content-wrap-closed"><header role="banner" class="ui-header ui-bar-b" data-role="header" data-theme="b">
+		
+	<h1 aria-level="1" role="heading" class="ui-title">Problem Detail</h1>
+
+		
+		
+		
+			<a title="" data-theme="b" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="#nav-panel" data-role="button" data-icon="bars" data-iconpos="notext" class="ui-btn-left ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all ui-btn-icon-notext"><span class="ui-btn-inner"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-bars ui-icon-shadow">&nbsp;</span></span></a>
+		
+		
+		
+		
+
+	
+			
+				<a data-theme="b" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="#profile-panel" data-role="button" class="ui-btn-right profile ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all"><span class="ui-btn-inner"><span class="ui-btn-text">Profile</span></span></a>
+			
+		
+
+
+		</header><section role="main" class="ui-content" data-role="content">
+		
+
+		<!-- Begin nav -->
+		
+		<div class="global-nav">
+		<div class="ui-grid-d ui-responsive desktop-only">
+			<div class="ui-block-a"><a class="ui-link" href="http://172.16.45.6/">Homepage</a></div>
+			<div class="ui-block-b"><a class="ui-link" href="http://172.16.45.6/problems/">Problem Set</a></div>
+			<div class="ui-block-c"><a class="ui-link" href="http://172.16.45.6/contests/list/">Contests</a></div>
+			<div class="ui-block-d"><a class="ui-link" href="http://172.16.45.6/submissions/list/">Submissions</a></div>
+			<div class="ui-block-e">
+			
+				Welcome, 邵俊儒
+			
+			</div>
+		</div>
+		</div>
+		
+		<!-- End nav -->
+
+		<!-- Begin page-specific content -->
+		
+	<div class="haspadding">
+		<h2>5408. Bullseye</h2>
+        
+		<div>
+		
+			<iframe style="height: 1339px;" src="SJTU%20Online%20Judge_files/a.html" class="problem-text-box" height="500" width="100%"></iframe>
+		
+		</div>
+		<div class="problem-info">
+		<ul class="info-list">
+			<li><strong>Problem Source:</strong> <a class="ui-link" href="http://172.16.45.6/problems/?source=Greater%20New%20York%202004">Greater New York 2004</a><br></li>
+			<li><strong>Problem OJ:</strong> <a class="ui-link" href="http://172.16.45.6/problems/?oj=POJ">POJ</a><br></li>
+			<li><strong>Problem OJ ID:</strong> 2272</li>
+		</ul>
+		</div>
+		<div class="desktop-fixed-width">
+			<div class="ui-grid-b">
+				<div class="ui-block-a"><a class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="http://172.16.45.6/problems/submit/5408/" data-role="button" data-theme="b"><span class="ui-btn-inner"><span class="ui-btn-text">Submit</span></span></a></div>
+				<div class="ui-block-b"><a class="ui-btn ui-btn-up-d ui-shadow ui-btn-corner-all" data-theme="d" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="http://172.16.45.6/submissions/list/?problem=5408" data-role="button"><span class="ui-btn-inner"><span class="ui-btn-text">Status</span></span></a></div>
+                <div class="ui-block-c"><a class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all" data-wrapperels="span" data-iconshadow="true" data-shadow="true" data-corners="true" href="javascript:%20history.go(-1);" data-role="button" data-theme="c"><span class="ui-btn-inner"><span class="ui-btn-text">Back</span></span></a></div>
+			</div>
+		</div>
+	</div>
+
+		<!-- End page-specific content -->
+		</section><footer role="contentinfo" class="ui-footer ui-bar-a" data-role="footer" data-theme="">
+		
+			<p>Copyright © 2013 SJTU ACM-ICPC Team. All Rights Reserved.
+			<br>Any bug report or suggestion please send an email to sjtuojdev@gmail.com</p>
+		
+		</footer></div>
+		<!-- End Header -->
+		
+		
+		<!-- Content Section -->
+		
+		<!-- End Content Section -->
+		
+		
+		
+		
+		<!-- Service declarations -->
+		<div class="hidden js-service-declarations">
+		
+		
+		</div>
+	<div class="ui-panel-dismiss" data-panelid="nav-panel"></div><div class="ui-panel-dismiss" data-panelid="profile-panel"></div></div></body></html>

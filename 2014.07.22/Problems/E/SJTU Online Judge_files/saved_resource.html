@@ -1,0 +1,172 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1975/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+Pasha is a passenger in Rome, Italy. He is in the train station 
+terminal right now (named <span class="textit">Stazinione Termini</span> in Italian) 
+and wants to go to the airport of Rome (named <span class="textit">Aeroporto 
+Fiumicino</span>) as soon as possible. 
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p5050.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p5050.eps}" border="0" height="417" src="p5050.png" width="314">
+</div>
+<p>
+Just in front of the exit door of Termini, he found a bus station 
+for Bus Shuttle service which takes the passengers right to airport 
+for only 8 Euros per passenger, luggage included! ``Sounds economic 
+an fast!", said Pasha with himself and decided to wait for the bus. 
+
+</p><p>
+Under the sign for Bus Shuttle, there was a time table in which only 
+leaving time of buses was written. As it is around 7:00 AM in Rome now, 
+he has to wait until 7:45 AM for the first bus to come. 
+
+</p><p>
+Pasha is curious to know the travel time between <span class="textit">Stazione 
+Termini</span> and <span class="textit">Aeroporto Fiumicino</span>. He asks some passengers in 
+the bus station but they don't know it or their English are too weak 
+to talk to Pasha! However, a passenger tells Pasha: 
+
+</p><p>
+</p><blockquote>
+''I Remember, it was yesterday at 13:15, that I was in a bus shuttle 
+to <span class="textit">Termini</span> and saw another bus shuttle (going to 
+<span class="textit">Aeroporto</span>) just passed us, in the opposite direction. But, 
+I can't remember when I got sit in the bus and when we arrived 
+to <span class="textit">Aeroporto</span>. All I remember is a cross with another shuttle 
+at 13:15". 
+
+</blockquote>
+<p>
+Not enough information, but still useful. A few minutes later, some 
+other passengers gave the same type of information to Pasha - exactly 
+a meet at a certain time with a shuttle bus coming in opposite 
+direction while they were in a bus. 
+
+</p><p>
+And finally Pasha found a brochure of the shuttle service, in which 
+not only the time table of ``Termini to Aeroporto" was written, but 
+also the time table of ``Aeroporto to Termini" could be found (i.e. 
+the same table in the figure, but in the Aeroport station and for 
+buses that are leaving Aeroporto to Termini). 
+
+</p><p>
+Having these two time tables and some meeting-time (like 13:15 in 
+above example), Pasha asks for your assistance to discover the travel 
+time between Termini and Aeroporto, in minutes. 
+
+</p><p>
+You may assume that all buses are moving with constant speed and 
+without stop in the middle of the way. We know that the travel time 
+is less than 24 hours. You can also assume each bus goes to parking 
+after arriving to its destination and all the buses are leaving in 
+a single day i.e. if there are <span class="MATH"><i>n</i></span> leaving times written on Termini 
+station and <span class="MATH"><i>m</i></span> leaving times are on Aeroporto station, then assume 
+only <span class="MATH"><i>n</i> + <i>m</i></span> buses exist in Rome, which have <!-- MATH
+ $n \times m$
+ -->
+<span class="MATH"><i>n</i> <tt>x</tt> <i>m</i></span> possible 
+meeting times.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+The input consists of several test cases. Each test case begins with a 
+line containing two numbers <span class="MATH"><i>n</i></span> (the number of buses going from Termini 
+to Aeroporto) and <span class="MATH"><i>m</i></span> (the number of buses going from Aeroporto to 
+Termini) in the day of our story. It is guaranteed that 
+<!-- MATH
+ $0 < n, m \le 100$
+ -->
+<span class="MATH">0 &lt; <i>n</i>, <i>m</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5050img2.png" width="18">100</span>. 
+
+</p><p>
+In the second line of each test case, <span class="MATH"><i>n</i></span> distinct and space-separated 
+times are given between 00:00 and 23:59 (inclusive) with leading zero 
+when minutes or hours are single digit. They are the times a buses 
+leaves Termini to Aeroporto. The third line contains <span class="MATH"><i>m</i></span> distinct 
+times, in the same format, for the buses leaving Aeroporto to Termini. 
+You can assume either all of these <span class="MATH"><i>m</i> + <i>n</i></span> times are even, or all of 
+them are odd (in minutes). 
+
+</p><p>
+The fourth line contains an integer <!-- MATH
+ $1 \le k \le 100$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5050img2.png" width="18"><i>k</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5050img2.png" width="18">100</span>, the number of 
+passengers who have given ``meeting time while was in the bus" to 
+Pasha. These <span class="MATH"><i>k</i></span> times are written in the fifth line in the same format 
+for time as above and separated by space. 
+
+</p><p>
+</p><p>
+<br>
+<span class="textbf">Hint:</span>
+</p><p>
+Althoug all buses a 
+leaving in the same day but they may meet the day after! For example, 
+if the travel time is 8 hours, then a bus leaving at 22:00 from A to T 
+will meet the bus leaving at 23:00 from T to A at 06:30 next day. 
+This way, a report of 06:30 may belong the morning of the same day 
+(e.g. a bus left at 05:00 met the bus left at 06:00 of opposite 
+direction and the travel time is 2 hours, or the prior case). Remember 
+that a meet can occur even in stations! 
+
+</p><p>
+For example, a bus may leave at 21:05 and another bus from the 
+opposite direction arrives exactly at the same time. The last 
+line of the input contains two zero numbers.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For each test case, if the travel time can be found and is unique, 
+write it in a single line. If no travel time can satisfy the claims 
+of the passengers write ``<tt>il bugiardo passeggeri!</tt>" (without 
+quotes) for this case and proceed to the the next line. Otherwise, 
+if there are <span class="MATH"><i>c</i> &gt; 1</span> possible travel times (in range 00:01 to 
+23:59, of course) write ``<span class="MATH"><i>c</i></span> <tt>scelte</tt>" where <span class="MATH"><i>c</i></span> is substituted 
+with its value. Note that the travel times cannot have 
+fractions of minutes.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>2 2 
+05:05 06:05
+12:09 11:09
+1 
+17:00 
+2 1 
+05:00 06:00
+13:00 
+2 
+14:00 15:00
+2 2 
+05:05 06:05
+12:09 11:09
+2 
+17:00 18:00
+0 0
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3 scelte 
+il bugiardo passeggeri! 
+17:46
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

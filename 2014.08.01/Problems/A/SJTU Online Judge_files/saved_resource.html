@@ -1,0 +1,31 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1175/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="no-cache" http-equiv="Pragma"><meta content="en-US" http-equiv="Content-Language"><title>3690 -- Constellations</title><style type="text/css">A {	TEXT-TRANSFORM: none; TEXT-DECORATION: none } A:hover { COLOR: red; TEXT-DECORATION: underline } A.s { TEXT-TRANSFORM: none; TEXT-DECORATION: none;	color:black; } A.s:hover {	COLOR: white; TEXT-DECORATION: none; } A.s0 { TEXT-TRANSFORM: none; TEXT-DECORATION: none;  color:#FFFF99;	font-weight:bold; } A.s0:hover { TEXT-DECORATION: underline; color:#FFFF99;	font-weight:bold; } A.t { TEXT-DECORATION: none; color:#FFFF66; } A.t:hover {	color:#FFFF66; text-decoration: underline; } A.x { TEXT-DECORATION: none; color:white; font-weight:bold;} A.x:hover {	color:#FFFF66; text-decoration: underline; font-weight:bold;} A.bt { padding:2px 3px 2px 3px; margin: 0px; height: 20px; color:blue; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;} A.bt:hover {background-color:#E6E6E6; padding:1px 2px; margin: 0px; border: 1px solid #999; height: 20px; color:#000066; text-decoration: none; cursor: hand;} div.sd1 { position:absolute; left:0px} div.sd2 { position:absolute; right:0px} div.ptt { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} div.plm { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:12pt;} div.ptx { font-family:"Times New Roman",Times,serif; font-size:12pt;} p.pst { text-align:left; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} pre.sio { font-family:Courier New,Courier,monospace; font-size:12pt;} th.h {color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; width:20%;} td.h { font-family:Arial, Helvetica, sans-serif; } th.in {color:#FFFFFF; text-align:center; background-color:#6589d1; border-color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } table.a {background-image:url('images/table_back.jpg'); border-collapse:collapse; font-family:"Times New Roman", Times, serif; } table.h1 {border-collapse:collapse; width:100%; background-color:#BECEF1; border-width:0px;} table.h2 {width:100%; background:url('images/bar.jpg') repeat-y; border-width:0px;} tr.in {color:#FFFFFF; text-align:center; background-color:#6589d1; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } tr.h { background-color:#6589d1; vertical-align:top; color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; } span.b1 {color:#6589D1; font-weight:bold; font-size:x-small } span.b2 {color:gray; font-size:x-small } span.n1 {color:red; font-size:x-small } ul.v {filter:Alpha(opacity=100); overflow:hidden; } table.survey {border-collapse:collapse; font-family:"Times New Roman", Times, serif;}
+.stdft { font-family:"Times New Roman", Times, serif; } span.h_txt { color: blue; } span.h_award { color: red; }  span.h_nocontest { color: #1a5cc8; }  span.h_contest { color: red;} 
+</style><style type="text/css"></style></head><body alink="blue" lang="en-US" leftmargin="5" link="blue" onkeydown="KeyDown(event)" vlink="blue"><a name="top"></a><marquee behavior="ALTERNATE" scrollamount="3" scrolldelay="150"><font color="red">北京大学暑期课：<a href="http://acm.pku.edu.cn/summerschool/pku_acm_train.htm">《ACM/ICPC竞赛训练》</a>面向全球招生</font></marquee><table background="table_back.jpg" border="0" width="100%"><tbody><tr><td>
+<div class="ptt" lang="en-US">Constellations</div>
+<div class="plm"><table align="center"><tbody><tr><td><b>Time Limit:</b> 3000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr></tbody></table></div><p class="pst">Description</p><div class="ptx" lang="en-US"><div><p>The starry sky in the summer night is one of the most beautiful things on this planet. People imagine that some groups of stars in the sky form so-called constellations. Formally a constellation is a group of stars that are connected together to form a figure or picture. Some well-known constellations contain striking and familiar patterns of bright stars. Examples are Orion (containing a figure of a hunter), Leo (containing bright stars outlining the form of a lion), Scorpius (a scorpion), and Crux (a cross).</p><p>In this problem, you are to find occurrences of given constellations in a starry sky. For the sake of simplicity, the starry sky is given as a <i>N</i> × <i>M</i> matrix, each cell of which is a '*' or '0' indicating a star in the corresponding position or no star, respectively. Several constellations are given as a group of <i>T</i> <i>P</i> × <i>Q</i> matrices. You are to report how many constellations appear in the starry sky.</p><p>Note that a constellation appears in the sky if and only the corresponding <i>P</i> × <i>Q</i> matrix exactly matches some <i>P</i> × <i>Q</i> sub-matrix in the <i>N</i> × <i>M</i> matrix.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input consists of multiple test cases. Each test case starts with a line containing five integers <i>N</i>,<i> M</i>,<i> T</i>,<i> P</i> and<i> Q</i>(1 ≤ <i>N</i>,<i> M</i> ≤ 1000, 1 ≤ <i>T</i> ≤ 100, 1 ≤ <i>P</i>,<i> Q</i> ≤ 50). <br>The following <i>N</i> lines describe the <i>N</i> × <i>M</i> matrix, each of which contains <i>M</i> characters '*' or '0'.<br>The last part of the test case describe <i>T</i> constellations, each of which takes <i>P</i> lines in the same format as the matrix describing the sky. There is a blank line preceding each constellation.<br>The last test case is followed by a line containing five zeros.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case, print a line containing the test case number( beginning with 1) followed by the number of constellations appearing in the sky.</p></div></div><p class="pst">Sample Input</p><pre class="sio">3 3 2 2 2
+*00
+0**
+*00
+
+**
+00
+
+*0
+**
+3 3 2 2 2
+*00
+0**
+*00
+
+**
+00
+
+*0
+0*
+0 0 0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 1
+Case 2: 2</pre></td></tr></tbody></table>
+<p></p>
+</body></html>

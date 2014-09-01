@@ -1,0 +1,101 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1971/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+The floor of Gholam's bedroom is tiled with white and yellow tiles Sometime 
+when he is bored, he stands on one of the tiles and starts to walk along 
+the row he is standing on. He first decides on a number <span class="MATH"><i>n</i></span> and starts to 
+walk <span class="MATH"><i>n</i></span> steps. If he reaches the wall, he turns back and continues to walk 
+in the opposite direction. He continues until he takes <span class="MATH"><i>n</i></span> steps. Note 
+that turning back besides a wall does not count as a step. He counts how 
+many yellow tiles he steps on. 
+
+</p><p>
+For example, the figure below shows a row in the floor. The colors 
+of the tiles are shown with the characters `Y' and `W' for yellow and 
+white tiles respectively. If he starts at tille 3 facing to the right, 
+and decides to take 7 steps, he finally stops a tile 2. During this 
+walk, he steps 3 times on yellow tiles. 
+
+</p><p>
+</p><div align="CENTER">
+<table border="" cols="6" frame="BOX" rules="GROUPS">
+<colgroup><col align="CENTER"></colgroup><colgroup><col align="CENTER"></colgroup><colgroup><col align="CENTER"></colgroup><colgroup><col align="CENTER"></colgroup><colgroup><col align="CENTER"></colgroup><colgroup><col align="CENTER">
+</colgroup><tbody>
+<tr><td align="CENTER" nowrap="" valign="BASELINE">
+1 </td><td align="CENTER" nowrap="" valign="BASELINE"> 2 </td><td align="CENTER" nowrap="" valign="BASELINE"> 3 </td><td align="CENTER" nowrap="" valign="BASELINE"> 4 </td><td align="CENTER" nowrap="" valign="BASELINE"> 5 </td><td align="CENTER" nowrap="" valign="BASELINE"> 6 </td></tr>
+</tbody><tbody>
+<tr><td align="CENTER" nowrap="" valign="BASELINE">Y </td><td align="CENTER" nowrap="" valign="BASELINE"> W </td><td align="CENTER" nowrap="" valign="BASELINE"> W </td><td align="CENTER" nowrap="" valign="BASELINE"> Y </td><td align="CENTER" nowrap="" valign="BASELINE"> W </td><td align="CENTER" nowrap="" valign="BASELINE"> Y </td></tr>
+</tbody>
+</table>
+</div>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+The input contains <span class="MATH"><i>T</i></span> test cases. The first line of input has only the 
+integer <span class="MATH"><i>T</i></span>. Each test case contains two lines. The first line contains 
+two integers <span class="MATH"><i>m</i></span> <!-- MATH
+ $(3 \le m \le 100)$
+ -->
+<span class="MATH">(3<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5046img1.png" width="18"><i>m</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5046img1.png" width="18">100)</span> and <span class="MATH"><i>n</i></span> (<!-- MATH
+ $1 \le n \le 1000$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5046img1.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5046img1.png" width="18">1000</span>), which 
+is the number of steps Gholam takes. The second line contains <span class="MATH"><i>m</i></span> 
+integers describing the tiles in the row and is in 
+the following format: 
+
+</p><p>
+</p><p>
+<br>
+<!-- MATH
+ $a_{1} \ a_{2} \ \dots \ a_{m}$
+ -->
+<span class="MATH"><i>a</i><sub>1</sub>&nbsp;<i>a</i><sub>2</sub>&nbsp;...&nbsp;<i>a</i><sub>m</sub></span>
+</p><p>
+</p><p>
+<br>
+Each <span class="MATH"><i>a</i><sub>i</sub></span> is either 0, 1, 2, or 3. If <span class="MATH"><i>a</i><sub>i</sub> = 0</span>, then <span class="MATH"><i>a</i><sub>i</sub></span> has a 
+yellow tile, and <span class="MATH"><i>a</i><sub>i</sub> &gt; 0</span> indicates that <span class="MATH"><i>a</i><sub>i</sub></span> has a white tile. 
+If <span class="MATH"><i>a</i><sub>i</sub> = 2</span>, then Gholam is starting from the tile <span class="MATH"><i>a</i><sub>i</sub></span>, facing 
+to the right, and if <span class="MATH"><i>a</i><sub>i</sub> = 3</span> then he is starting from the tile <span class="MATH"><i>a</i><sub>i</sub></span>, 
+facing to the left. The numbers are separated by space characters. You 
+may assume that exactly one of the numbers is 2 or 3. Note that it 
+is implied that Gholam always starts from a white tile.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For each test case, write a single line in the output having a single 
+number which is the number of times Gholam steps on a yellow tile.
+
+</p><p>
+</p><p>
+<br>
+<span class="textbf">Note:</span> The first test case corresponds to the example given in the problem description.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>2 
+6 7 
+0 1 2 0 1 0
+5 3 
+0 3 1 0 0
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3 
+1
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

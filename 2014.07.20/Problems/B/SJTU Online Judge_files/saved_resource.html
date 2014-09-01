@@ -1,0 +1,361 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/2388/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="HDOJ ACM ICPC OJ C C++ Pascal Java" name="keywords"><style type="text/css">body
+{
+	font-size:14px;
+	font-family:Times New Roman;
+	background: url(background.jpg);
+}
+
+a{ color:#1a5cc8; text-decoration:none }
+a:hover { color:orange; text-decoration:underline }
+textarea { border:#879BFF 1px dashed; background-color: F4FBFF }
+input { border:#879BFF 1px dashed; font-size:14px; background-color:transparent; vertical-align: middle }
+select { margin: -2px; background-color:F4FBFF }
+img { border: none}
+hr { height: 1px; border: 0; border-top: #1a5cc8 1px dashed }
+h1 { color: #1A5CC8; text-align: center }
+
+.text40{ width: 54px; height:22px }
+.text60{ width: 80px; height:22px }
+.text90{ width: 90px; height:22px }
+.button40{ width: 54px; height:24px; background-color:F4FBFF; font-family:Tahoma; font-size:12px }
+.footer_link{ font-family: Arial; font-size:12px; font-weight:bold; color:#1a5cc8 }
+.banner{ font-family: Arial; font-weight: bold; font-size: 18px; color: #FFFFFF }
+.hot {color:red }
+.pagerunstatus { font-family:Arial;font-size:11px;color:green}
+.table_header { font-family: Arial; font-weight: bold; font-size:12px; color: #ffffff; background-color:#1a5cc8; text-align:center }
+.table_text { font-family: Tahoma; font-size:12px}
+.code {word-wrap: break-word; word-break:break-all; background-color:#f4fbff; border:#b7cbff 1px dashed; font-size:12px; font-family: Courier New, Courier; text-align:left; padding:10px}
+.fixedsize { word-wrap:break-word; word-break:break-all }
+
+#contest_nav { word-wrap:break-word; width:980px; border:1px solid #1a5cc8; background-color:#1a5cc8; line-height:32px}
+#contest_nav a { font-family: Arial; font-weight: bold; font-size: 18px; color: #FFFFFF; margin: 15px }
+#contest_nav a:hover { font-family: Arial; font-weight: bold; font-size: 18px; color:orange; margin: 15px }
+#contest_footer { width:980px; height:70px; border:1px solid #1a5cc8; text-align:center; padding: 5px 0}
+#contest_footer div{ word-wrap:break-word }
+#rollword { word-wrap:break-word; width:980px; margin-top:10px}
+
+/* Panel对象的css */
+div.panel_content {
+	height: auto;
+	background: url(panel-content.png) repeat-y;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 14px;
+	font-family: Times New Roman;
+	text-align: left
+}
+div.panel_title {
+	height: 38px;
+	background: transparent url(panel-title.png) left bottom no-repeat;
+	padding: 0 14px;
+	color: #7CA9ED;
+	font-size: 18px;
+	font-family: Arial;
+	font-weight: bold
+}
+div.panel_bottom {
+	height: auto;
+	margin: 0;
+	background: url(panel-bottom.png) left top no-repeat
+}
+div.panel_content pre {
+	margin: 0;
+	font-size: 14px
+}
+/* 高亮显示的项 */
+#highlight_item{
+	light:expression(onmouseover=function(){this.style.backgroundColor="#D7EBFF"},onmouseout=function(){this.style.backgroundColor="transparent"}) 
+}
+
+</style><style type="text/css">
+#content{
+	height:auto!important;
+	height:120px;
+	min-height:120px; 
+	font-size:16px;
+	margin:0 auto 20px auto;
+	width:100%;
+	
+}
+#maintable{
+	text-align:center;
+	font-size:14px;
+	width:100%;
+	margin:10px auto;
+	
+}
+#maintable tr{
+	height:19px;
+}
+.tbheader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:16px;
+	background-color:#1a5cc8;
+	color:white;
+}
+.tbheader a{
+	color:white;
+}
+ .contype{
+	font-size:14px;
+	margin:10px auto;
+	text-align:center;
+}
+.ctpublic{
+	color:red;
+}
+.ctprivate{
+	color:green;
+}
+.cspend{
+	color:green;
+}
+.csend{
+	color:gray;
+}
+.csrun{
+	color:red;
+}
+#content h4{
+	font-weight:normal;
+	margin:3px auto 0;
+	text-align:center;
+	color:#1a5cc8;
+	font-size:14px;
+}
+#content h2{
+	margin:5px auto;
+	text-align:center;
+	font-size:18px;
+}
+#content #errormsg{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	width:100%;
+	color:red;
+	text-align:center;
+	margin:5px auto;
+	padding:0;
+}
+
+/*DIY Contest 的相关表单*/
+#content #mkcon{
+	width:68%;
+	margin:20px auto 0 200px;
+
+}
+#content #mkcon p{
+	margin:10px auto;
+}
+#content #mkcon .timeinfo input{
+	width:40px;
+}
+#content #mkcon .timeinfo span{
+	border:#b7cbff 1px dashed;
+}
+#content #mkcon #diyconname{
+	width:414px;
+	margin-left:11px;
+}
+#content #mkcon #diyyear{
+	margin-left:36px;
+}
+#content #mkcon #diylday{
+	margin-left:21px;
+}
+#content #contesttype{
+	margin-left:16px;
+	border:none;
+}
+#content #contesttype2{
+	margin-left:16px;
+	border:none;
+}
+
+#content #mkcon #password{
+	margin-left:33px;
+	width:152px;
+}
+#content #mkpro{
+	width:50%;
+	margin:20px auto 20px 310px;
+}
+#content #mkpro h1{
+	font-size:16px;
+}
+#content #mkpro p{
+	text-align:center;
+}
+#content #mkpro #diyspid{
+	margin-left:40px;
+	width:40px;
+}
+#content #mkpro #diytpid{
+	margin-left:85px;
+	width:40px;
+}
+#content #mknotice{
+	margin:auto;
+	width:100%;
+	height:100px;
+}</style><style type="text/css">
+#content{
+	height:auto!important;
+	height:120px;
+	min-height:120px; 
+	font-size:16px;
+	margin:0 auto 20px auto;
+	width:100%;
+	
+}
+#maintable{
+	text-align:center;
+	font-size:14px;
+	width:100%;
+	margin:10px auto;
+	
+}
+#maintable tr{
+	height:19px;
+}
+.tbheader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:16px;
+	background-color:#1a5cc8;
+	color:white;
+}
+.tbheader a{
+	color:white;
+}
+ .contype{
+	font-size:14px;
+	margin:10px auto;
+	text-align:center;
+}
+.ctpublic{
+	color:red;
+}
+.ctprivate{
+	color:green;
+}
+.cspend{
+	color:green;
+}
+.csend{
+	color:gray;
+}
+.csrun{
+	color:red;
+}
+#content h4{
+	font-weight:normal;
+	margin:3px auto 0;
+	text-align:center;
+	color:#1a5cc8;
+	font-size:14px;
+}
+#content h2{
+	margin:5px auto;
+	text-align:center;
+	font-size:18px;
+}
+#content #errormsg{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	width:100%;
+	color:red;
+	text-align:center;
+	margin:5px auto;
+	padding:0;
+}
+
+/*WEB Contest 的相关表单*/
+#content #mkcon{
+	width:68%;
+	margin:20px auto 0 200px;
+
+}
+#content #mkcon p{
+	margin:10px auto;
+}
+#content #mkcon .timeinfo input{
+	width:40px;
+}
+#content #mkcon .timeinfo span{
+	border:#b7cbff 1px dashed;
+}
+#content #mkcon #webconname{
+	width:414px;
+	margin-left:11px;
+}
+#content #mkcon #webyear{
+	margin-left:36px;
+}
+#content #mkcon #weblday{
+	margin-left:21px;
+}
+#content #contesttype{
+	margin-left:16px;
+	border:none;
+}
+#content #contesttype2{
+	margin-left:16px;
+	border:none;
+}
+
+#content #mkcon #password{
+	margin-left:33px;
+	width:152px;
+}
+#content #mkpro{
+	width:50%;
+	margin:20px auto 20px 310px;
+}
+#content #mkpro h1{
+	font-size:16px;
+}
+#content #mkpro p{
+	text-align:center;
+}
+#content #mkpro #webspid{
+	margin-left:0px;
+	width:80px;
+}
+
+#content #mknotice{
+	margin:auto;
+	width:100%;
+	height:100px;
+}
+</style><style type="text/css"></style></head><body>
+<a name="top"></a>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="word-wrap:break-word">
+
+
+
+<tbody><tr><td align="center"><h1 style="color:#1A5CC8">Harry Potter and the Binary Kingdom</h1><font><b><span style="font-family:Arial;font-size:12px;font-weight:bold;color:green">Time Limit: 5000/3000 MS (Java/Others), Memory Limit: 65536/65536 K (Java/Others)</span></b></font><br><br><div align="left" class="panel_title">Problem Description</div> <div class="panel_content">After defeating the Voldemort, Harry is enjoying his senior year in Hogwarts with his friends. They decide to make a graduation trip, using their newest magical broom. In the journey, Harry is trapped in a Kingdom named Binary Kingdom, maybe because the smart but isolated people still have no idea of the great reputation of this young wizard. Loving numbers and binary very much, the subjects of Binary Kingdom claim only Harry solve the problem can he leave there.<br><center><img src="C360-1002-1.jpg"></center> <br>The problem begins with an empty number multi-set, with six kinds of operation:<br><br>1. INS M: insert M into the set<br>2. DEL M: delete all numbers equal to M if any one exists; otherwise report “Del error”<br>3. ADD M: increase the value of every number by M<br>4. SUB M: decrease the value of every number by M if after decreasing no number will be less than zero; otherwise report “Sub error”<br>5. QNUM M: query how many numbers equal to M in the set<br>6. QBIT M: query how many numbers whose M-th bit is 1 in its binary, M is counting from lower to higher, beginning with 0<br><br>Though our brave Harry Potter can proficient in many fields, he is not good at math, now, it’s your time.<br></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Input</div> <div class="panel_content">The first line contains a single integer T, indicating the number of test cases.<br>Each test case begins with an integer M, following M operations. <br><br>Technical Specification<br><br>1. 1 &lt;= T &lt;= 12<br>2. 1 &lt;= M &lt;= 100 000<br>3. The QBIT operations’ M will in the range [0, 17], the other five operations’ M in the range [0, 1 000 000 000].<br></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Output</div> <div class="panel_content">For each test case, output the case number first, then a newline.<br>If the operation is QNUM or QBIT, output the number.<br>If the operation is invalid DEL or SUB, output “Del error” or “Sub error”.<br>After each test case, output a blank line.<br></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Sample Input</div><div class="panel_content"><pre><div style="font-family:Courier New,Courier,monospace;">1
+10
+INS 1
+INS 2
+DEL 1
+INS 3
+DEL 1
+ADD 1
+SUB 4
+QNUM 2
+QBIT 1
+QBIT 2</div></pre></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Sample Output</div><div class="panel_content"><pre><div style="font-family:Courier New,Courier,monospace;">Case 1:
+Del error
+Sub error
+0
+1
+1</div></pre></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Author</div> <div class="panel_content">iSea@WHU</div><div class="panel_bottom">&nbsp;</div><br>  <br> <br></td></tr>
+</tbody></table>
+
+</body></html>

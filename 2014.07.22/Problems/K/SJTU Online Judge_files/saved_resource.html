@@ -1,0 +1,80 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1981/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+In the history of Asia there is an ancient empire called Mayo which 
+was one of the most powerful countries of its own time. At first 
+the empire consisted of only one city (which was the capital) but 
+its people were great warriors so they started to invade their 
+neighbors and increase the area of their lands. 
+
+</p><p>
+Each time they defeated a neighbor, the razed all their cities 
+except the biggest one, which is added to their kingdom. They built 
+a road from that city to one of their own cities, so that they could 
+travel between all cities of their lands. If the added city was big 
+enough it would become the capital of Mayo. 
+
+</p><p>
+The vulnerability of a city in Mayo was defined the number of roads 
+that one had to pass to travel from that city to the capital of Mayo. 
+We have a list of all kingdoms that people of Mayo invaded and the 
+description of the roads that they have built. 
+
+</p><p>
+We want to know the maximum vulnerability of the cities, after each 
+city was added to Mayo. To simplify the output of the program, report 
+the sum of <!-- MATH
+ $v_{1} + v_{2} + \ldots + v_{n}$
+ -->
+<span class="MATH"><i>v</i><sub>1</sub> + <i>v</i><sub>2</sub> +...+ <i>v</i><sub>n</sub></span>, where <span class="MATH"><i>v</i><sub>i</sub></span> is the maximum vulnerability 
+of the cities after adding the <span class="MATH"><i>i</i></span>-th city.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+There are several test case in the input. The first line of each test 
+case contains <span class="MATH"><i>n</i></span> <!-- MATH
+ $(1 \le n \le 100,000)$
+ -->
+<span class="MATH">(1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5056img1.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5056img1.png" width="18">100, 000)</span> which is the number of cities 
+in Mayo. For each test case, the cities are numbered from 1 to <span class="MATH"><i>n</i></span> 
+ordered by the time they had been added to Mayo. So, the city 1 is 
+the first city of Mayo (and its initial capital). Each of next <span class="MATH"><i>n</i> - 1</span> 
+lines of the test case contains two integers <span class="MATH"><i>j</i></span> and <span class="MATH"><i>c</i></span>. This means that 
+when the city <span class="MATH"><i>i</i> + 1</span> is added to Mayo, a road is built between the city 
+<span class="MATH"><i>i</i> + 1</span> a the city <span class="MATH"><i>j</i></span>. The number <span class="MATH"><i>c</i></span> is non-zero if the new city (city <span class="MATH"><i>i</i> + 1</span>) 
+had become the new capital of Mayo at the time of its join to Mayo, and 
+is zero otherwise. The last line of the input contains a single `<tt>0</tt>'. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For each test case, output a single line containing the sum of maximum 
+vulnerabilities as explained in the problem description.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3 
+1 1
+2 1
+3 
+1 1
+2 0
+0
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3 
+2
+</pre><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

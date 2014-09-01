@@ -1,0 +1,66 @@
+<html><head><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="no-cache" http-equiv="Pragma"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="en-US" http-equiv="Content-Language"><title>2279 -- Mr. Young's Picture Permutations</title><style type="text/css">A {	TEXT-TRANSFORM: none; TEXT-DECORATION: none } A:hover { COLOR: red; TEXT-DECORATION: underline } A.s { TEXT-TRANSFORM: none; TEXT-DECORATION: none;	color:black; } A.s:hover {	COLOR: white; TEXT-DECORATION: none; } A.s0 { TEXT-TRANSFORM: none; TEXT-DECORATION: none;  color:#FFFF99;	font-weight:bold; } A.s0:hover { TEXT-DECORATION: underline; color:#FFFF99;	font-weight:bold; } A.t { TEXT-DECORATION: none; color:#FFFF66; } A.t:hover {	color:#FFFF66; text-decoration: underline; } A.x { TEXT-DECORATION: none; color:white; font-weight:bold;} A.x:hover {	color:#FFFF66; text-decoration: underline; font-weight:bold;} A.bt { padding:2px 3px 2px 3px; margin: 0px; height: 20px; color:blue; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;} A.bt:hover {background-color:#E6E6E6; padding:1px 2px; margin: 0px; border: 1px solid #999; height: 20px; color:#000066; text-decoration: none; cursor: hand;} div.sd1 { position:absolute; left:0px} div.sd2 { position:absolute; right:0px} div.ptt { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} div.plm { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:12pt;} div.ptx { font-family:"Times New Roman",Times,serif; font-size:12pt;} p.pst { text-align:left; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} pre.sio { font-family:Courier New,Courier,monospace; font-size:12pt;} th.h {color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; width:20%;} td.h { font-family:Arial, Helvetica, sans-serif; } th.in {color:#FFFFFF; text-align:center; background-color:#6589d1; border-color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } table.a {background-image:url('images/table_back.jpg'); border-collapse:collapse; font-family:"Times New Roman", Times, serif; } table.h1 {border-collapse:collapse; width:100%; background-color:#BECEF1; border-width:0px;} table.h2 {width:100%; background:url('images/bar.jpg') repeat-y; border-width:0px;} tr.in {color:#FFFFFF; text-align:center; background-color:#6589d1; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } tr.h { background-color:#6589d1; vertical-align:top; color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; } span.b1 {color:#6589D1; font-weight:bold; font-size:x-small } span.b2 {color:gray; font-size:x-small } span.n1 {color:red; font-size:x-small } ul.v {filter:Alpha(opacity=100); overflow:hidden; } table.survey {border-collapse:collapse; font-family:"Times New Roman", Times, serif;}
+.stdft { font-family:"Times New Roman", Times, serif; } span.h_txt { color: blue; } span.h_award { color: red; }  span.h_nocontest { color: #1a5cc8; }  span.h_contest { color: red;} 
+</style></head><body leftmargin="5" onkeydown="KeyDown(event)" alink="blue" lang="en-US" link="blue" vlink="blue"><a name="top"></a><marquee behavior="ALTERNATE" scrollamount="3" scrolldelay="150"><font color="red">北京大学暑期课：<a href="http://acm.pku.edu.cn/summerschool/pku_acm_train.htm">《ACM/ICPC竞赛训练》</a>面向全球招生</font></marquee><table border="0" background="a_data_002/table_back.html" width="100%"><tbody><tr><td>
+<div class="ptt" lang="en-US">Mr. Young's Picture Permutations</div>
+<div class="plm"><table align="center"><tbody><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr></tbody></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Mr.
+ Young wishes to take a picture of his class. The students will stand in
+ rows with each row no longer than the row behind it and the left ends 
+of the rows aligned. For instance, 12 students could be arranged in rows
+ (from back to front) of 5, 3, 3 and 1 students. 
+<br><pre>X X X X X
+<br>X X X
+<br>X X X
+<br>X</pre> <br>In addition, Mr. Young wants the students in each row 
+arranged so that heights decrease from left to right. Also, student 
+heights should decrease from the back to the front. Thinking about it, 
+Mr. Young sees that for the 12-student example, there are at least two 
+ways to arrange the students (with 1 as the tallest etc.): 
+<br><pre> 1  2  3  4  5     1  5  8 11 12
+<br> 6  7  8           2  6  9
+<br> 9 10 11           3  7 10
+<br>12                 4</pre> <br>Mr. Young wonders how many different 
+arrangements of the students there might be for a given arrangement of 
+rows. He tries counting by hand starting with rows of 3, 2 and 1 and 
+counts 16 arrangements: 
+<br><pre>123 123 124 124 125 125 126 126 134 134 135 135 136 136 145 146
+<br>45  46  35  36  34  36  34  35  25  26  24  26  24  25  26  25
+<br>6   5   6   5   6   4   5   4   6   5   6   4   5   4   3   3</pre> <br>Mr.
+ Young sees that counting by hand is not going to be very effective for 
+any reasonable number of students so he asks you to help out by writing a
+ computer program to determine the number of different arrangements of 
+students for a given set of rows.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The
+ input for each problem instance will consist of two lines. The first 
+line gives the number of rows, k, as a decimal integer. The second line 
+contains the lengths of the rows from back to front (n1, n2,..., nk) as 
+decimal integers separated by a single space. The problem set ends with a
+ line with a row count of 0. There will never be more than 5 rows and 
+the total number of students, N, (sum of the row lengths) will be at 
+most 30. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The
+ output for each problem instance shall be the number of arrangements of
+ the N students into the given rows so that the heights decrease along 
+each row from left to right and along each column from back to front as a
+ decimal integer. (Assume all heights are distinct.) The result of each 
+problem instance should be on a separate line. The input data will be 
+chosen so that the result will always fit in an unsigned 32 bit integer.
+ </div><p class="pst">Sample Input</p><pre class="sio">1
+30
+5
+1 1 1 1 1
+3
+3 2 1
+4
+5 3 3 1
+5
+6 5 4 3 2
+2
+15 15
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+1
+16
+4158
+141892608
+9694845
+</pre></td></tr></tbody></table>
+<p></p>
+</body></html>

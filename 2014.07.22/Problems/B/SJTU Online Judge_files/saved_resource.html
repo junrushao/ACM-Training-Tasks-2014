@@ -1,0 +1,109 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1972/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+Finally, the budget for enhancing Arbiter web site (which is an online 
+judge) is allocated and your job is to improve the functionality of its 
+login page. The new login page should help users on two common login 
+mistakes: 
+
+</p><p>
+</p><ol>
+<li>When the ``caps lock" key is ON, each lowercase letter is typed as 
+uppercase and vice versa. 
+</li>
+<li>When ``num lock" key is OFF, numeric characters (digits `0' through `9') 
+are not typed. 
+</li>
+</ol>
+<p>
+Given a username and a password in the login page, the system compares 
+the entered password with the original one (for that username). If 
+they were the same, the login step is successfully finished and the 
+user is redirected to the appropriate page. Otherwise, the login is 
+unsuccessful. But, some extra hints should be given to the user if the 
+entered password was related to the original one in the following ways: 
+
+</p><p>
+</p><ol>
+<li>If the two passwords were case-insensitively the same, but the case 
+of all their English letters were completely opposite, then the ``caps 
+lock" key might be ON by mistake. 
+</li>
+<li>If the entered password was the same as the original one after 
+removing the numeric characters of the original password, then the 
+``num lock" key might be OFF by mistake 
+</li>
+<li>The two cases above might happen together. 
+</li>
+</ol>
+<p>
+Given both the entered password and its original one, you have to write 
+a program which prints the appropriate message.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+The input contains <span class="MATH"><i>n</i></span> test cases. The fist line of input has only the 
+integer <span class="MATH"><i>n</i></span>. Each of the next <span class="MATH"><i>n</i></span> lines is a test case having two strings 
+of at least one and at most 10 alphanumeric characters. The first 
+string is the original password, and the second one is the password 
+entered by the user in the login page.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+Write the result of the <span class="MATH"><i>i</i></span>-th test case, on the <span class="MATH"><i>i</i></span>-th line of output. As you 
+see in the sample output you should write the test case number and then, 
+one of the following messages: 
+
+</p><p>
+</p><ul>
+<li><tt>Login successful.</tt>
+</li>
+<li><tt>Wrong password. Please, check your caps lock key.</tt>
+</li>
+<li><tt>Wrong password. Please, check your num lock key.</tt>
+</li>
+<li><tt>Wrong password. Please, check your caps lock and num lock keys.</tt>
+</li>
+<li><tt>Wrong password.</tt>
+</li>
+</ul>
+<p>
+</p><p>
+<br>
+Note that you must write the output exactly as indicates. Pay attention 
+to character cases and blanks.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>6 
+aaBBccDD aaBBccDD 
+aaBBccDD aaBBccDD9 
+aaBBccDD aaBBCCDD 
+aaBBccDD AAbbCCdd 
+a4B3c2D1 aBcD 
+a4B3c2D1 AbCd
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>Case 1: Login successful. 
+Case 2: Wrong password. 
+Case 3: Wrong password. 
+Case 4: Wrong password. Please, check your caps lock key. 
+Case 5: Wrong password. Please, check your num loc key. 
+Case 6: Wrong password. Please, check your caps lock and num lock keys.
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

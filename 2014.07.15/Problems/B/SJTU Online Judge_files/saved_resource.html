@@ -1,0 +1,80 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1991/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><style type="text/css"></style></head><body>We are given a string <span class="MATH"><i>s</i></span> of two characters `<tt>a</tt>' and `<tt>b</tt>'. Let a <span class="textit">group</span> be a maximal consecutive substring of 
+the same character. 
+Any group <span class="MATH"><i>g</i></span> of <span class="MATH"><i>s</i></span> of length at least two can be removed (or <span class="textit">popped</span>) and a new string is constructed by concatenating the 
+remaining left 
+and right substrings of <span class="MATH"><i>s</i></span>. We repeat this process until either the string becomes the empty string or there is no more group of length 
+at least two. 
+
+<p>
+For example, string <!-- MATH
+ $s = babbbaaabb$
+ -->
+<span class="MATH"><i>s</i> = <i>babbbaaabb</i></span> has 5 groups <span class="MATH"><i>b</i></span>, <span class="MATH"><i>a</i></span>, <span class="MATH"><i>bbb</i></span>, <span class="MATH"><i>aaa</i></span>, and <span class="MATH"><i>bb</i></span>. The string <span class="MATH"><i>s</i></span> can be turned into the empty string 
+by popping groups in the following sequence (the underlined group is to be popped in the sequence): 
+</p><p><!-- MATH
+ \begin{displaymath}
+ba\underline{bbb}aaabb \rightarrow b\underline{aaaa}bb \rightarrow \underline{bbb} \rightarrow empty string
+\end{displaymath}
+ -->
+</p>
+<div align="CENTER" class="mathdisplay">
+<i>ba</i><img align="MIDDLE" alt="$\displaystyle \underline{{bbb}}$" border="0" height="34" src="4844img1.png" width="27"><i>aaabb</i> <img align="MIDDLE" alt="$\displaystyle \rightarrow$" border="0" height="31" src="4844img2.png" width="22"> <i>b</i><img align="MIDDLE" alt="$\displaystyle \underline{{aaaa}}$" border="0" height="31" src="4844img3.png" width="41"><i>bb</i> <img align="MIDDLE" alt="$\displaystyle \rightarrow$" border="0" height="31" src="4844img2.png" width="22"> <img align="MIDDLE" alt="$\displaystyle \underline{{bbb}}$" border="0" height="34" src="4844img1.png" width="27"> <img align="MIDDLE" alt="$\displaystyle \rightarrow$" border="0" height="31" src="4844img2.png" width="22"> <i>emptystring</i>
+</div><p></p>
+<p>
+But the group may not turn to an empty string by a different sequence of pop operations: 
+</p><p><!-- MATH
+ \begin{displaymath}
+babbbaaa\underline{bb} \rightarrow ba\underline{bbb}aaa \rightarrow b\underline{aaaa} \rightarrow b
+\end{displaymath}
+ -->
+</p>
+<div align="CENTER" class="mathdisplay">
+<i>babbbaaa</i><img align="MIDDLE" alt="$\displaystyle \underline{{bb}}$" border="0" height="34" src="4844img4.png" width="20"> <img align="MIDDLE" alt="$\displaystyle \rightarrow$" border="0" height="31" src="4844img2.png" width="22"> <i>ba</i><img align="MIDDLE" alt="$\displaystyle \underline{{bbb}}$" border="0" height="34" src="4844img1.png" width="27"><i>aaa</i> <img align="MIDDLE" alt="$\displaystyle \rightarrow$" border="0" height="31" src="4844img2.png" width="22"> <i>b</i><img align="MIDDLE" alt="$\displaystyle \underline{{aaaa}}$" border="0" height="31" src="4844img3.png" width="41"> <img align="MIDDLE" alt="$\displaystyle \rightarrow$" border="0" height="31" src="4844img2.png" width="22"> <i>b</i>
+</div><p></p>
+<p>
+Given a string, write a program to decide whether the string can be turned into the empty string by some sequence of popping operations.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+Your program is to read from standard input. The input consists of <span class="MATH"><i>T</i></span> test cases. The number of test cases <span class="MATH"><i>T</i></span> is given in the first 
+line of the input. Each test case consists of a single line containing a string of two characters `<tt>a</tt>' and `<tt>b</tt>'. The minimum 
+and maximum length of the string is 1 and 25, respectively. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+Your program is to write to standard output. Print one line for 
+each test case. The line of each test case should contain 0 or 1. Print 1 if the input string can be turned to an empty string by a 
+sequence of popping operations. Otherwise print 0.
+
+</p><p>
+The following shows sample input and output for three test cases. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3
+babbbaaabb
+aabbaabb
+abab
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>1
+1
+0
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

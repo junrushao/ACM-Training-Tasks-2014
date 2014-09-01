@@ -1,0 +1,134 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1997/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><style type="text/css"></style></head><body>In the morning, service engineers in a telecom company receive a list of jobs which they must serve today. They install telephones, 
+internet, ipTVs, etc and repair troubles with established facilities. A client requires a deadline when the requested job must be 
+completed. But the engineers may not complete some jobs within their deadlines because of job overload. For each job, we consider, 
+as a penalty of the engineer, the difference between the deadline and the completion time. It measures how long the job proceeds
+after its deadline. The problem is to find a schedule minimizing the sum of the penalties of the jobs with the two largest penalties. 
+
+<p>
+A service engineer gets a list of jobs <span class="MATH"><i>J</i><sub>i</sub></span> with a serving time <span class="MATH"><i>s</i><sub>i</sub></span> and a deadline <span class="MATH"><i>d</i><sub>i</sub></span>. A job <span class="MATH"><i>J</i><sub>i</sub></span> needs time <span class="MATH"><i>s</i><sub>i</sub></span>, 
+and if it is completed 
+at time <span class="MATH"><i>C</i><sub>i</sub></span>, then the penalty of <span class="MATH"><i>J</i><sub>i</sub></span> is defined to be <!-- MATH
+ $\max\{0, C_i -� d_i\}$
+ -->
+<span class="MATH">max{0, <i>C</i><sub>i</sub> - <i>d</i><sub>i</sub>}</span>. For convenience, we assume that the time <span class="MATH"><i>t</i></span> when a job can 
+be served is <!-- MATH
+ $0 \le t < \infty$
+ -->
+<span class="MATH">0<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4850img1.png" width="18"><i>t</i> &lt; <img align="BOTTOM" alt="$ \infty$" border="0" height="18" src="4850img2.png" width="22"></span> and <span class="MATH"><i>s</i><sub>i</sub></span> and <span class="MATH"><i>d</i><sub>i</sub></span> are given positive integers such that <!-- MATH
+ $0 < s_i \le d_i$
+ -->
+<span class="MATH">0 &lt; <i>s</i><sub>i</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4850img1.png" width="18"><i>d</i><sub>i</sub></span>. The goal is to find a schedule of 
+jobs minimizing the sum of the penalties of the jobs with the two largest penalties. 
+
+</p><p>
+For example, there are six jobs <span class="MATH"><i>J</i><sub>i</sub></span> with the pair 
+<span class="MATH">(<i>s</i><sub>i</sub>, <i>d</i><sub>i</sub>)</span> of the serving time <span class="MATH"><i>s</i><sub>i</sub></span> and the deadline <span class="MATH"><i>d</i><sub>i</sub></span>, <!-- MATH
+ $i = 1,\dots,6$
+ -->
+<span class="MATH"><i>i</i> = 1,..., 6</span>, where <!-- MATH
+ $(s_1,d_1) = (1,7)$
+ -->
+<span class="MATH">(<i>s</i><sub>1</sub>, <i>d</i><sub>1</sub>) = (1, 7)</span>, <!-- MATH
+ $(s_2,d_2) = (4,7)$
+ -->
+<span class="MATH">(<i>s</i><sub>2</sub>, <i>d</i><sub>2</sub>) = (4, 7)</span>, 
+<!-- MATH
+ $(s_3,d_3) = (2,4)$
+ -->
+<span class="MATH">(<i>s</i><sub>3</sub>, <i>d</i><sub>3</sub>) = (2, 4)</span>, <!-- MATH
+ $(s_4,d_4) = (2,15)$
+ -->
+<span class="MATH">(<i>s</i><sub>4</sub>, <i>d</i><sub>4</sub>) = (2, 15)</span>, <!-- MATH
+ $(s_5,d_5) = (3,5)$
+ -->
+<span class="MATH">(<i>s</i><sub>5</sub>, <i>d</i><sub>5</sub>) = (3, 5)</span>, <!-- MATH
+ $(s_6,d_6) = (3,8)$
+ -->
+<span class="MATH">(<i>s</i><sub>6</sub>, <i>d</i><sub>6</sub>) = (3, 8)</span>. Then Figure 1 represents a schedule 
+which minimizes the sum of the penalties of the jobs with the two largest penalties. The sum of the two largest penalties of an 
+optimal schedule is that of the penalties of <span class="MATH"><i>J</i><sub>2</sub></span> and <span class="MATH"><i>J</i><sub>6</sub></span>, namely 6 and 1, respectively, which is equal to 7 in this example.
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p4850.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p4850.eps}" border="0" height="219" src="p4850.png" width="1215">
+</div>
+<p>
+</p><div align="CENTER">Figure 1. The optimal schedule of the example
+
+</div>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+Your program is to read from standard input. The input consists of <span class="MATH"><i>T</i></span> test cases. The number of test cases <span class="MATH"><i>T</i></span> is given on the 
+first line of the input. The first line of each test case contains an integer <span class="MATH"><i>n</i></span> (<!-- MATH
+ $1 \le n \le 500$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4850img1.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4850img1.png" width="18">500</span>), the number of the given jobs. 
+In the next <span class="MATH"><i>n</i></span> lines of each test case, the <span class="MATH"><i>i</i></span>-th line contains two integer numbers <span class="MATH"><i>s</i><sub>i</sub></span> and <span class="MATH"><i>d</i><sub>i</sub></span>, representing the serving time and 
+the deadline of the job <span class="MATH"><i>J</i><sub>i</sub></span>, respectively, where <!-- MATH
+ $1 \le s_i \le d_i \le 10,000$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4850img1.png" width="18"><i>s</i><sub>i</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4850img1.png" width="18"><i>d</i><sub>i</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4850img1.png" width="18">10, 000</span>. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+Your program is to write to standard output. 
+Print exactly one line for each test case. The line contains the sum of the penalties of the jobs with the two largest penalties. 
+
+</p><p>
+The following shows sample input and ouput for three test cases.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3
+6
+1 7
+4 7
+2 4
+2 15
+3 5
+3 8
+7
+2 17
+2 11
+3 4
+3 20
+1 20
+4 7
+5 14
+10
+2 5
+2 9
+5 10
+3 11
+3 4
+4 21
+1 7
+2 9
+2 11
+2 23
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>7
+0
+14
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

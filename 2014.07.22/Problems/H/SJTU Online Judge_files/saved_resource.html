@@ -1,0 +1,82 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1978/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+Every four years, the world is enthusiastically celebrating the 
+Football World Cup event. Hosting such a prestigious event is 
+an honor for a country whichpours in billions of dollars. That is 
+why there are many competitions among volunteer countries and even 
+some shadow-bribing to get the vote to be the host of the World Cup. 
+
+</p><p>
+Voting procedure in the selection ceremony is yet another important 
+part of the host. Several countries <!-- MATH
+ $\{C_{1}, C_{2}, \ldots, C_{n}\}$
+ -->
+<span class="MATH">{<i>C</i><sub>1</sub>, <i>C</i><sub>2</sub>,..., <i>C</i><sub>n</sub>}</span> stand as the 
+candidates fo the host. Repeatedly, two countries are selected 
+randomly, and are put to vote. The losing country is eliminated and 
+the process is continued untill only one country remains which is 
+the winner. 
+
+</p><p>
+We have run a poll beforehand to predict the possible outcome of the 
+voting. For a pairs of countries <span class="MATH"><i>C</i><sub>i</sub></span> and <span class="MATH"><i>C</i><sub>j</sub></span>, we know which one 
+is the winner if the two countries are put in vote against each other. 
+There is no possibility of ties in the voting. 
+
+</p><p>
+The problem is, having the result of polls, determine the set of
+countries for which there is a possibility to win. In other words, 
+rule out the countries for which we are sure there is no chance of 
+becoming the host. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+There are several test cases in the input. The first line of each 
+test case contains a single intger <span class="MATH"><i>n</i></span> <!-- MATH
+ $(0 < n \le 1000)$
+ -->
+<span class="MATH">(0 &lt; <i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5053img1.png" width="18">1000)</span>, the 
+number of countries. Then there are <span class="MATH"><i>n</i></span> lines, describing the poll 
+results. The <span class="MATH"><i>i</i></span>-th line <!-- MATH
+ $(1 \le i \le n)$
+ -->
+<span class="MATH">(1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5053img1.png" width="18"><i>i</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5053img1.png" width="18"><i>n</i>)</span> is a string of zeros and 
+ones of lengt <span class="MATH"><i>n</i> - <i>i</i></span>. The <span class="MATH"><i>j</i></span>-th character in the string is one 
+if <span class="MATH"><i>C</i><sub>i</sub></span> wins over <span class="MATH"><i>C</i><sub>j</sub></span>, and zero otherwise Note that the last line 
+of each test case is an empty line. The last line of the input contains 
+a single `<tt>0</tt>'. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+For each test case, there is a single line in the output containing 
+the number of countries that have a chance for becoming the World Cup 
+host, according to the given poll results. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3 
+10 
+0 
+
+0
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>1
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

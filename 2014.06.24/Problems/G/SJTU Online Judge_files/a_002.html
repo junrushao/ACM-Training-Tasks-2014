@@ -1,0 +1,134 @@
+<html><head><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="no-cache" http-equiv="Pragma"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="en-US" http-equiv="Content-Language"><title>2278 -- Histology Assistant</title><style type="text/css">A {	TEXT-TRANSFORM: none; TEXT-DECORATION: none } A:hover { COLOR: red; TEXT-DECORATION: underline } A.s { TEXT-TRANSFORM: none; TEXT-DECORATION: none;	color:black; } A.s:hover {	COLOR: white; TEXT-DECORATION: none; } A.s0 { TEXT-TRANSFORM: none; TEXT-DECORATION: none;  color:#FFFF99;	font-weight:bold; } A.s0:hover { TEXT-DECORATION: underline; color:#FFFF99;	font-weight:bold; } A.t { TEXT-DECORATION: none; color:#FFFF66; } A.t:hover {	color:#FFFF66; text-decoration: underline; } A.x { TEXT-DECORATION: none; color:white; font-weight:bold;} A.x:hover {	color:#FFFF66; text-decoration: underline; font-weight:bold;} A.bt { padding:2px 3px 2px 3px; margin: 0px; height: 20px; color:blue; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;} A.bt:hover {background-color:#E6E6E6; padding:1px 2px; margin: 0px; border: 1px solid #999; height: 20px; color:#000066; text-decoration: none; cursor: hand;} div.sd1 { position:absolute; left:0px} div.sd2 { position:absolute; right:0px} div.ptt { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} div.plm { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:12pt;} div.ptx { font-family:"Times New Roman",Times,serif; font-size:12pt;} p.pst { text-align:left; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} pre.sio { font-family:Courier New,Courier,monospace; font-size:12pt;} th.h {color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; width:20%;} td.h { font-family:Arial, Helvetica, sans-serif; } th.in {color:#FFFFFF; text-align:center; background-color:#6589d1; border-color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } table.a {background-image:url('images/table_back.jpg'); border-collapse:collapse; font-family:"Times New Roman", Times, serif; } table.h1 {border-collapse:collapse; width:100%; background-color:#BECEF1; border-width:0px;} table.h2 {width:100%; background:url('images/bar.jpg') repeat-y; border-width:0px;} tr.in {color:#FFFFFF; text-align:center; background-color:#6589d1; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } tr.h { background-color:#6589d1; vertical-align:top; color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; } span.b1 {color:#6589D1; font-weight:bold; font-size:x-small } span.b2 {color:gray; font-size:x-small } span.n1 {color:red; font-size:x-small } ul.v {filter:Alpha(opacity=100); overflow:hidden; } table.survey {border-collapse:collapse; font-family:"Times New Roman", Times, serif;}
+.stdft { font-family:"Times New Roman", Times, serif; } span.h_txt { color: blue; } span.h_award { color: red; }  span.h_nocontest { color: #1a5cc8; }  span.h_contest { color: red;} 
+</style></head><body leftmargin="5" onkeydown="KeyDown(event)" alink="blue" lang="en-US" link="blue" vlink="blue"><a name="top"></a><marquee behavior="ALTERNATE" scrollamount="3" scrolldelay="150"><font color="red">北京大学暑期课：<a href="http://acm.pku.edu.cn/summerschool/pku_acm_train.htm">《ACM/ICPC竞赛训练》</a>面向全球招生</font></marquee><table border="0" background="a_data_002/table_back.html" width="100%"><tbody><tr><td>
+<div class="ptt" lang="en-US">Histology Assistant</div>
+<div class="plm"><table align="center"><tbody><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr></tbody></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">An
+ application to assist in the analysis of tissue samples is to work as 
+follows. A digital microphotograph of a stained tissue sample is scanned
+ to identify stained pixels. For each region of stained pixels, an 
+outline of the region is obtained. The outline is then analyzed for 
+shape indicators of disease and the outlines (color-coded for possible 
+disease) are overlaid on the microphotograph as it is displayed to the 
+pathologist. 
+<br> <br>This problem is to write a program, which processes a bitmap of
+ stained and unstained pixels, finds regions of stained pixels and, for 
+each region, outputs the outline of the region. Regions with fewer 
+stained pixels than a minimum size are ignored. Only the outer boundary 
+is computed (interior holes are ignored). 
+<br> <br>A pixel is adjacent to another pixel if the second pixel is 
+directly above, directly below, directly left or directly right of the 
+first pixel. Two stained pixels are connected if there is a sequence of 
+stained pixels starting with one of the pixels and ending with the other
+ for which each pixel in the sequence is adjacent to the next. A region 
+of stained pixels is a set of stained pixels, all of which are connected
+ to a single stained pixel. A stained pixel is a boundary pixel of its 
+region if at least one of the pixels adjacent to it is not stained. (All
+ pixels immediately outside the bitmap are considered unstained so that 
+pixels on the edge of the bitmap are boundary pixels.) In the example 
+below, there are 4 regions (stained pixels are `X', unstained are `.'). 
+<br><pre>                   ........................................
+<br>                   .XX.....................................
+<br>                   ..X.................XXX......XXX........
+<br>                   .....................XXX....XXX.........
+<br>                   .......XXX............XXX..XXX..........
+<br>                   .....XXXXXXX...........XXXXXX...........
+<br>                   ....XXXXXXXXX...........XXXX............
+<br>                   ...XXXX...XXXX...........XX.............
+<br>                   ..XXX.......XXX.........................
+<br>                   ..XXX.......XXX........XXXXXXX..........
+<br>                   .XXX.........XXX.......XXXXXXX..........
+<br>                   .XXX.........XXX.......XXXXXXX..........
+<br>                   .XXX.........XXX.......XXXXXXX..........
+<br>                   ..XXX.......XXX...........X.............
+<br>                   ..XXX.......XXX...........X.............
+<br>                   ...XXXX...XXXX.........XXXXXXX..........
+<br>                   ....XXXXXXXXX..........XXXXXXX..........
+<br>                   .....XXXXXXX...........XXXXXXX..........
+<br>                   .......XXX.............XXXXXXX..........
+<br>                   ........................................</pre> <br>Outlines
+ are to be specified as the left most point of the top most line of the 
+region, a count of boundary pixels and a sequence of moves from one 
+boundary pixel to the next clockwise using the codes (up = A, up right =
+ B, etc.): 
+<br><pre>             H  A  B
+<br>             G     C
+<br>             F  E  D</pre> <br>Rows are numbered from top to bottom 
+beginning with 1. Columns are numbered from left to right beginning with
+ 1. For example the outline of the `v' shaped region above would be: 
+<br> <br>3 21 22
+<br>CCDDDCBBBCCFFFFFGHHHHH
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is
+ a sequence of problem instances. Each problem instance begins with a 
+line containing 3 decimal numbers: row-count, column-count and 
+minimum-number-of-pixels. This line is followed by row-count lines of 
+column-count characters. Each character is either a period (.) for an 
+unstained pixel or an upper-case `X' for a stained pixel. The input ends
+ when the row-count is 0. Row-count will be at most 47, column-count 
+will be at most 63 and minimum- number-of-pixels will be at least 2. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For 
+each problem instance, the output begins with a line starting with a 
+decimal integer giving the number of components of at least 
+minimum-number-of-pixels stained pixels. This is followed by the 
+description of the boundary of each component. The boundaries are to be 
+listed in the order that a first pixel of the component appears while 
+scanning across lines from left to right with line scanned from top to 
+bottom. For each component, the output begins with a line giving the row
+ number of the start pixel, the column number of the start pixel and the
+ number of pixels in the boundary as decimal integers separated by a 
+single space. This line is followed by lines of direction codes `A' 
+through `H'. Each line shall have 40 characters except the last line. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">20 40 4
+........................................
+.XX.....................................
+..X.................XXX......XXX........
+.....................XXX....XXX.........
+.......XXX............XXX..XXX..........
+.....XXXXXXX...........XXXXXX...........
+....XXXXXXXXX...........XXXX............
+...XXXX...XXXX...........XX.............
+..XXX.......XXX.........................
+..XXX.......XXX........XXXXXXX..........
+.XXX.........XXX.......XXXXXXX..........
+.XXX.........XXX.......XXXXXXX..........
+.XXX.........XXX.......XXXXXXX..........
+..XXX.......XXX...........X.............
+..XXX.......XXX...........X.............
+...XXXX...XXXX.........XXXXXXX..........
+....XXXXXXXXX..........XXXXXXX..........
+.....XXXXXXX...........XXXXXXX..........
+.......XXX.............XXXXXXX..........
+........................................
+12 40 4
+.X.X.X.X.X.X......XX...XXXXXXXXXXXXXXXX.
+.XXX.XXX.XXX......XX..XXXXXXXXXXXXXXXXXX
+.X...X...X........XX..XX.............XXX
+.X.X.X.X.X.X......XX..XX...XXXXXXXX...XX
+.XXX.XXX.XXX......XX..XX..XXXXXXXXXX..XX
+.X...X...X........XX..XX..XX......XX..XX
+.X.X.X.X.X.X......XX..XXX........XXX..XX
+.XXX.XXX.XXX......XX..XXXXXXXXXXXXXX..XX
+.X...X...X........XX...XXXXXXXXXXXX...XX
+.X.X.X.X.X.X......XXX................XXX
+.XXXXXXXXXXX......XXXXXXXXXXXXXXXXXXXXXX
+...................XXXXXXXXXXXXXXXXXXXX.
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+3 21 22
+CCDDDCBBBCCFFFFFGHHHHH
+5 8 36
+CCDCDDDEDEEFEFFFGFGGHGHHHAHAABABBBCB
+10 24 38
+CCCCCCEEEGGFEDCCEEEGGGGGGAAACCBAHGGAAA
+2
+1 2 103
+DBEGFEDBEGFEDBEGFEDBDBAAAAAAAAADBEGFEDBE
+GFEDBEGFEDBDBAAAAAAAAADBEGFEDBEGFEDBEGFE
+DBEGGGGGGGGGGAAAAAAAAAA
+1 19 159
+CEEEEEEEEDDCCCCCCCCCCCCCCCBBAAAAAHHGGGGG
+GGGGGGGFEEEDDCCCCCCCBBHGGGGGFGABCCCCCCCD
+EEEFGGGGGGGGGGGHAAAAAABCCCCCCCCCCCCCCCDE
+EEEEEEEEFGGGGGGGGGGGGGGGGGGGHAAAAAAAAAA
+</pre></td></tr></tbody></table>
+<p></p>
+</body></html>

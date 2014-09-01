@@ -1,0 +1,899 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><style>html, body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    line-height: 1.4;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    padding: 0px;
+    margin: 0px;
+}
+
+table {
+    font-size: 12px;
+}
+div {
+    font-size: 12px;
+}
+span {
+    font-size: 12px;
+}
+.username	{ COLOR: #db6d00; FONT-WEIGHT: BOLD }
+
+A:link		{ COLOR: blue; TEXT-DECORATION: none }
+A:visited	{ COLOR: blue; TEXT-DECORATION: none }
+A:active	{ COLOR: blue; TEXT-DECORATION: none }
+A:hover		{ COLOR: red; TEXT-DECORATION: none }
+
+.button	{ width: 70px }
+
+
+
+#page
+{
+	width: 100%;
+	margin: 0;
+	
+}
+
+#container
+{
+	clear: both;
+	float: left;
+	width: 100%;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+#header
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+	border-width: 0;
+	background-color: #6EB9F3;
+	text-align: center;
+}
+
+#loginbar
+{
+	float: left;
+	width: 100%;
+	height: 32px;
+	vertical-align: middle;
+	padding: 0;
+	border-width: 0;
+	background-image: url(../image/link_bg2.gif);
+	background-repeat: repeat-x;
+}
+
+#loginbar .welcome_msg
+{
+	float: left;
+	padding: 6 10;
+	border-width: 0;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+
+
+#loginbar .login_info
+{
+	float: right;
+	padding: 6 10;
+	border-width: 0;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+
+#loginbar a
+{
+	color: #ffffff;
+}
+#loginbar a:hover
+{
+	color: #ff9900;
+}
+
+#minibar
+{
+	float: left;
+	width: 100%;
+
+}
+
+#menus
+{
+	border-width: 0;
+	font-size: 15px;
+	color: #333333;
+	background-image: url(../image/link_bg1.gif);
+	background-repeat: repeat-x;
+	padding: 5px;
+}
+
+#minibar a:link, #minibar a:visited, #minibar a:active
+{
+	color: #333333;
+}
+#minibar a:hover
+{
+	color: #ff9900;
+}
+#minibar a:link.selected, #minibar a:visited.selected, #minibar a:active.selected
+{
+	color: #db6d00;
+}
+#minibar a:hover.selected
+{
+	color: #ff9900;
+}
+
+#main
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+#leftnav
+{
+	width: 169px;
+    height: 100%;
+
+}
+
+.nav_header
+{
+    padding: 0px 10px;
+    height: 29px;
+	width: 100%;
+	background-image: url(../image/buttonbg1.gif);
+}
+.nav_header img
+{
+    float: right;
+    border: 0;
+
+}
+
+.selected_item
+{
+    padding: 0px 10px;
+    height: 29px;
+	width: 100%;
+	background-color: #eca044;
+}
+
+.item
+{
+    padding: 0px 10px;
+    height: 29px;
+	width: 100%;
+	background-color: #738EDE;
+}
+
+.icpc_logo
+{
+    background-color: #738EDE;
+    text-align: center;
+    padding: 10px;
+	width: 100%;
+	vertical-align: bottom;
+}
+
+#leftnav a
+{
+	color: #ffffff;
+}
+#leftnav a:hover
+{
+	color: #ff9900;
+}
+
+#leftnav .selected_item a
+{
+	color: #333333;
+}
+#leftnav .selected_item a:hover
+{
+	color: #333333;
+}
+
+#content
+{
+	float: left;
+	width: 100%;
+}
+
+#content_title
+{
+    background-color: eeeeee;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+	clear: left;
+	width: 100%;
+	padding: 4 0;
+    text-indent: 5px;
+}
+
+#export
+{
+    float: right;
+	clear: none;
+	font-weight: normal;
+	padding: 0px 10px;
+}
+
+#content_body
+{
+	float: left;
+	clear: left;
+	margin: 0;
+	width: 100%;
+    height: 100%;
+	font-size: 15px;
+}
+
+
+
+
+#footer
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+	border-width: 0;
+	text-align: center;
+}
+
+
+#pageNumber
+{
+  width: 40;
+}
+
+#totalPages
+{
+  color: ED7805;
+}
+
+.pageFooter
+{
+    float: none;
+    clear: both;
+	width: 500;
+	border-width: 0;
+	padding: 5;
+}
+
+#pageInput
+{
+
+  width: 50%;
+  float: left;
+
+}
+#pageNave
+{
+    width: 50%;
+    text-align: center;
+}
+
+.internalError
+{
+    height: 30px;
+    padding: 10;
+    font-size: 20;
+    color: red;
+}
+
+.error
+{
+    font-size: 11;
+    color: red;
+}
+
+
+.profileTable input, .profileTable select
+{
+    width: 150px;
+}
+
+
+.profileFields
+{
+    list-style: none;
+    
+}
+
+.profileFields li
+{
+    padding: 1 5;
+    clear: left;
+    float: none;
+}
+
+.profileFieldName
+{
+    clear: left;
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding: 0 5;
+}
+
+.profileField
+{
+    height: 23px;
+    padding: 0 5;
+}
+
+.profileButtons
+{
+    padding: 10 100;
+    width: 600px;
+    text-align: center;
+}
+
+.profileButton
+{
+    float: left;
+    padding: 0 20 0 20;
+    text-align: center;
+}
+
+
+.profileField input, .profileField select
+{
+    width: 150px;
+}
+
+
+
+.contestFields
+{
+    list-style: none;
+}
+
+.contestFields li
+{
+    padding: 3
+}
+
+.contestFieldName
+{
+    clear: left;
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding: 3
+}
+
+.contestFieldHeader
+{
+    font-size: 12;
+    font-weight: bold;
+    clear: left;
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding: 3
+}
+
+.contestField
+{
+
+}
+
+.contestButtons
+{
+    padding: 10 100;
+    width: 500px;
+    text-align: center;
+}
+
+.contestButton
+{
+    float: left;
+    padding: 0 20 0 20;
+    text-align: center;
+}
+
+
+.contestField input, .contestField select
+{
+    width: 150px;
+}
+
+
+.list
+{
+    width: 100%;
+    border: 1px;
+    border-collapse: separate;
+}
+
+.rowHeader
+{
+    height: 25px;
+    background-color: #CCCCFF;
+    width: 100%;
+}
+
+
+
+.rowOdd
+{
+    height: 25px;
+    background-color: #FFFFFF;
+}
+
+.rowEven
+{
+    height: 25px;
+    background-color: #E9EFF8;
+}
+
+.roleName
+{
+    padding: 0 8 0 8;
+    font-size: 14;    
+}
+.roleDescription
+{
+    padding: 0 8 0 8;    
+}
+
+.roleAdmin
+{
+    padding: 0 8 0 8;    
+}
+
+.roleNameHeader
+{
+    padding: 0 8 0 8;
+    font-size: 14;
+    width: 150px;
+}
+
+.roleDescriptionHeader
+{
+    padding: 0 8 0 8;
+    
+}
+
+.roleAdminHeader
+{
+    padding: 0 8 0 8;
+    width: 100px;
+}
+
+.contestName
+{
+    padding: 0 8 0 8;
+    font-size: 14;
+}
+
+.contestStatus
+{
+    padding: 0 8 0 8;
+    width: 220px;
+}
+
+.contestNameHeader
+{
+    padding: 0 8 0 8;
+}
+
+.contestStatusHeader
+{
+    padding: 0 8 0 8;
+    width: 220px;
+}
+
+.contestInfo
+{
+  width: 160;
+  height: 30;
+  font-weight: bold;
+  padding: 0 0 0 30;
+}
+
+.contestInfoTable
+{
+  font-size: 16px;
+  width: 98%;
+  border: 10;
+  padding: 30 30 30 30;
+}
+
+
+
+.user_name
+{
+    float: left;
+    font-weight: bold;
+	color: #DB6D00;
+}
+
+.runId
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runSubmitTime
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runJudgeStatus
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runProblemId
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runLanguage
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runTime
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runMemory
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runUserName
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.runAdmin
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+
+.problemColor
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 30px;
+}
+.problemSolved
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 40px;
+}
+.problemId
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+.problemTitle
+{
+    padding: 0 8 0 8;
+    text-align: left;
+}
+.problemStatus
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 130px;
+}
+.problemAdmin
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+.statisticsProblem
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.statisticsAC
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.statisticsAC
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsWA
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsPE
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.statisticsTLE
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsRTE
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsFPE
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsSF
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsNZEC
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsOLE
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+.statisticsMLE
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.statisticsCE
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.statisticsSubmit
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.statisticsSummaryRow
+{
+    height: 25px;
+    background-color: #E0E0F0;
+}
+
+
+.ranklistRank
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+
+.ranklistUser
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 100px;
+}
+
+
+.ranklistSolved
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+
+.ranklistProblem
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.ranklistPenalty
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+
+.problemsetList
+{
+    width: 400px;
+    border: 1px;
+    border-collapse: separate;
+}
+
+.problemsetRanklistRank
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+
+.problemsetRanklistUser
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 120px;
+}
+
+.problemsetRanklistPlan
+{
+    padding: 0 8 0 8;
+    text-align: center;
+}
+
+.problemsetRanklistSolved
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+
+.problemsetRanklistSubmitted
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+
+.problemsetRanklistACRatio
+{
+    padding: 0 8 0 8;
+    text-align: center;
+    width: 60px;
+}
+
+
+.bigProblemTitle
+{
+    font-size: 24px;
+    color: blue;
+    text-align: center
+}
+
+
+
+
+.message
+{
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red
+}
+
+.back
+{
+    padding: 10px 0px;
+}
+
+
+.dateLink a:link, .dateLink a:visited, .dateLink a:active
+{
+	color: blue;
+}
+.dateLink a:hover
+{
+	color: #ff9900;
+}
+
+.judgeReplyAC
+{
+    color: red;
+}
+.judgeReplyOther
+{
+    color: green;
+}
+
+.userSearchSelectBox
+{ 
+width:120px; 
+}
+.sponsor
+{
+	float: left;
+	margin-top: -35px;
+	padding-left: 10px;
+}
+</style></head><body style="margin: 20px;"><div id="content_body">
+<center><span class="bigProblemTitle">New Governor's Problem</span></center>
+<hr>
+<center>
+<font color="green">Time Limit: </font> 2 Seconds
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <font color="green">Memory Limit: </font> 65536 KB
+                
+            </center>
+<hr>
+<p>
+	Recently the new governor KT encountered a hard problem. Her province has <var>N</var>
+ major cities, and there are many old roads connects pairs of cities. 
+Each road has a traffic volume. Because of the bucket theory, when going
+ from one city to another through a route consisting of some roads, the 
+maximum total traffic volume is the minimal traffic volume of one road 
+in the route. From one city to another city, you can choose more than 
+one route, but at any time, a road's transport volume can not exceed its
+ maximal transport volume.
+</p>
+<p>
+	Because of the province's industrial restructuring, some of the roads 
+are not so important as before. In order to reduce the cost of the 
+government management, she wants to close at most <var>K</var> roads. But there are two big cities numbered 1 and <var>N</var>
+ in the province. And between these two cities there is a traffic 
+demand. Her adviser told her that no matter which roads she chooses to 
+close, the impact on the transport volume is small. But smart KT does 
+not believe what he said.
+</p>
+<p>
+	To prove that, she want you to calculate that, at the worst case after 
+she closing some roads, the minimum transport volume from city 1 to city
+ <var>N</var>.
+</p>
+<h4>Input</h4>
+<p>
+	There are multiple test cases. For each test case:
+</p>
+<p>
+	The first line contains three integer <var>N</var>(1≤<var>N</var>≤10), <var>M</var>(1≤<var>M</var>≤1000), <var>K</var>(0≤<var>K</var>≤M), <var>N</var> is the number of cities, <var>M</var> is the number of roads, please notice that the roads is bidirectional, and <var>K</var> has mentioned above.
+</p>
+<p>
+	The after <var>M</var> lines describe the roads, each line has three integers <var>A</var>, <var>B</var>(1≤<var>A</var>,<var>B</var>≤<var>N</var>), <var>C</var>(1≤<var>C</var>≤10<sup>8</sup>). That means the transport volume from city <var>A</var> to city <var>B</var> is <var>C</var>.
+</p>
+<p>
+	There is a blank line between every two cases.
+</p>
+<p>
+	Process to the end of input.
+</p>
+<h4>Output</h4>
+<p>
+	One line for each test case. The minimum traffic volume from city 1 to city <var>N</var> after she closing at most <var>K</var> roads.
+</p>
+<h4>Sample Input</h4>
+<pre>2 1 0
+1 2 1
+
+2 2 1
+1 2 1
+1 2 2
+</pre>
+<h4>Sample Output</h4>
+<pre>1
+1
+</pre>
+<hr>
+            
+                Author: <strong>TANG, Yajie</strong><br>
+            
+            
+                Source: <strong>ZOJ Monthly, March 2014</strong><br>
+
+<br><br></div></body></html>

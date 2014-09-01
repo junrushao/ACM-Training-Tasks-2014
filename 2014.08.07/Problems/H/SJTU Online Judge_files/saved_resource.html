@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0038)http://172.16.45.6/problems/3699/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1770. The Party of Ural Champions @ Timus Online Judge</title><style type="text/css"></style></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1770. The Party of Ural Champions</h2><div class="problem_limits">Time limit: 1.0 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_normal">Because of the coming election to the Regional Duma, all the billboards along
+the roads in Yekaterinburg have been replaced. They are now agitating for the
+Party of Ural Champions. There are <i>n</i> intersections in Yekaterinburg, and some
+of them are connected by two-way roads. Any two intersections are connected by
+a sequence of such roads. There can be at most one billboard on any road
+connecting two intersections. Each billboard faces one side only, which means
+that the agitation can be seen by drivers moving in only one of the two
+directions.</div></div><div class="problem_par"><div class="problem_par_normal">The Party of Ural Champions has presented a report to the election committee,
+in which it has given information on the campaign materials. In particular, for
+each pair of intersections the report specifies the minimum number of times a
+car driver will see the agitation when driving from the first of these
+intersection to the second regardless of the route he would take.
+</div></div><div class="problem_par"><div class="problem_par_normal">Chairman of the Regional Election Committee suspects that there is an error in
+the report, because there is no configuration of roads and no arrangement of
+billboards corresponding to the given data. Your task is to verify this
+assertion.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">The first line contains the integer <i>n</i> (2 ≤ <i>n</i> ≤ 300). In each of the
+following <i>n</i> lines you are given <i>n</i> integers separated with a space. The
+number in the <i>i</i>-th line at the <i>j</i>-th position is equal to the minimum number of times a car driver will see the agitation when driving from the <i>i</i>-th
+intersection to the <i>j</i>-th intersection. All the integers in this table are in
+the range from 0 to <i>n</i>&nbsp;−&nbsp;1. All the numbers on the main diagonal are zeros.</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">If there is a configuration of roads and billboards that
+corresponds to the data in the report, then output “YES” in the
+first line. Then output <i>n</i> lines containing <i>n</i> symbols each. In the <i>i</i>-th
+line at the <i>j</i>-th position output
+<ul>
+<li> “0” if the <i>i</i>-th and the <i>j</i>-th intersections are not connected by a road;</li>
+<li> “1” if the <i>i</i>-th and the <i>j</i>-th intersections are connected by a road
+but there is no billboard on this road or there is a billboard but a car driver
+will not see the agitation when driving from the <i>i</i>-th intersection to the
+<i>j</i>-th intersection;</li>
+<li> “2” if the <i>i</i>-th and the <i>j</i>-th intersections are connected by a road
+and a car driver will see the agitation when driving from the <i>i</i>-th
+intersection to the <i>j</i>-th intersection.</li>
+</ul>
+No intersection can be connected by a road with itself. If several answers are
+possible, output any of them.</div></div><div class="problem_par"><div class="problem_par_normal">If there is no required configuration of roads and billboards, output “NO” in the only line.</div></div><h3 class="problem_subtitle">Samples</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">5
+0 1 1 1 1
+1 0 1 0 1
+0 0 0 0 0
+2 1 2 0 2
+0 0 0 0 0
+</pre></td><td><pre class="intable">YES
+00202
+00210
+11001
+02000
+10100
+</pre></td></tr><tr><td><pre class="intable">2
+0 1
+1 0
+</pre></td><td><pre class="intable">NO
+</pre></td></tr></tbody></table><div class="problem_source"><b>Problem Author: </b>Igor Chevdar<br><b>Problem Source: </b>The 14th Urals Collegiate Programing Championship, April 10, 2010<br><br></div></div></div><script type="text/javascript" async="" src="watch.js"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript>&lt;div&gt;&lt;img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/&gt;&lt;/div&gt;</noscript><iframe name="RemoteIframe" allowtransparency="true" style="position: absolute; left: -999px; top: -999px; width: 1px; height: 1px;"></iframe></body></html>

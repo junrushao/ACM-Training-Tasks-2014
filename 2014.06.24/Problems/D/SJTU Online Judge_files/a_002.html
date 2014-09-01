@@ -1,0 +1,45 @@
+<html><head><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="no-cache" http-equiv="Pragma"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="en-US" http-equiv="Content-Language"><title>2276 -- Model Rocket Height</title><style type="text/css">A {	TEXT-TRANSFORM: none; TEXT-DECORATION: none } A:hover { COLOR: red; TEXT-DECORATION: underline } A.s { TEXT-TRANSFORM: none; TEXT-DECORATION: none;	color:black; } A.s:hover {	COLOR: white; TEXT-DECORATION: none; } A.s0 { TEXT-TRANSFORM: none; TEXT-DECORATION: none;  color:#FFFF99;	font-weight:bold; } A.s0:hover { TEXT-DECORATION: underline; color:#FFFF99;	font-weight:bold; } A.t { TEXT-DECORATION: none; color:#FFFF66; } A.t:hover {	color:#FFFF66; text-decoration: underline; } A.x { TEXT-DECORATION: none; color:white; font-weight:bold;} A.x:hover {	color:#FFFF66; text-decoration: underline; font-weight:bold;} A.bt { padding:2px 3px 2px 3px; margin: 0px; height: 20px; color:blue; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;} A.bt:hover {background-color:#E6E6E6; padding:1px 2px; margin: 0px; border: 1px solid #999; height: 20px; color:#000066; text-decoration: none; cursor: hand;} div.sd1 { position:absolute; left:0px} div.sd2 { position:absolute; right:0px} div.ptt { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} div.plm { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:12pt;} div.ptx { font-family:"Times New Roman",Times,serif; font-size:12pt;} p.pst { text-align:left; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} pre.sio { font-family:Courier New,Courier,monospace; font-size:12pt;} th.h {color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; width:20%;} td.h { font-family:Arial, Helvetica, sans-serif; } th.in {color:#FFFFFF; text-align:center; background-color:#6589d1; border-color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } table.a {background-image:url('images/table_back.jpg'); border-collapse:collapse; font-family:"Times New Roman", Times, serif; } table.h1 {border-collapse:collapse; width:100%; background-color:#BECEF1; border-width:0px;} table.h2 {width:100%; background:url('images/bar.jpg') repeat-y; border-width:0px;} tr.in {color:#FFFFFF; text-align:center; background-color:#6589d1; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } tr.h { background-color:#6589d1; vertical-align:top; color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; } span.b1 {color:#6589D1; font-weight:bold; font-size:x-small } span.b2 {color:gray; font-size:x-small } span.n1 {color:red; font-size:x-small } ul.v {filter:Alpha(opacity=100); overflow:hidden; } table.survey {border-collapse:collapse; font-family:"Times New Roman", Times, serif;}
+.stdft { font-family:"Times New Roman", Times, serif; } span.h_txt { color: blue; } span.h_award { color: red; }  span.h_nocontest { color: #1a5cc8; }  span.h_contest { color: red;} 
+</style></head><body leftmargin="5" onkeydown="KeyDown(event)" alink="blue" lang="en-US" link="blue" vlink="blue"><a name="top"></a><marquee behavior="ALTERNATE" scrollamount="3" scrolldelay="150"><font color="red">北京大学暑期课：<a href="http://acm.pku.edu.cn/summerschool/pku_acm_train.htm">《ACM/ICPC竞赛训练》</a>面向全球招生</font></marquee><table border="0" background="a_data_002/table_back.html" width="100%"><tbody><tr><td>
+<div class="ptt" lang="en-US">Model Rocket Height</div>
+<div class="plm"><table align="center"><tbody><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr></tbody></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">One
+ method for determining the height achieved by a model rocket is to have
+ three observers A, B and C equally spaced D feet apart along a line at 
+one edge of the flat test field. Each observer has a theodolite or some 
+other device for measuring angle above the horizontal of a distant 
+object. Each measuring device is on a stand H feet above the field. When
+ a rocket is fired, near the top of its flight, it deploys a parachute 
+and emits a puff of dust. Each observer measures the angle above the 
+horizontal of the puff of dust from their location. From these angles α 
+for A, β for B and γ for C, the height of the rocket above the field can
+ be determined. 
+<br> <br>This problem is to write a program which, given the parameters D
+ (the distance between observers along the line in feet), H (the 
+distance of the measuring device above the field in feet), α (the angle 
+of the rocket above the horizontal in degrees measured by the leftmost 
+observer A), β (the angle above the horizontal in degrees observed by 
+the center observer B) and γ (the angle above the horizontal in degrees 
+measured by the rightmost observer C), computes the height of the rocket
+ above the field in feet to the nearest foot. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The 
+first line of input contains the parameters D and H in that order as 
+decimal numbers (not necessarily integers). These values would be 
+measured once at the beginning of the day and remain fixed through all 
+rocket shots. Each succeeding line of input will contain the angles α , β
+ and γ in that order (measured in degrees). The last line of input will 
+contain at least one value less than or equal to zero. Other than the 
+last line indicating the end of data all angles will be strictly between
+ 0 and 90 degrees. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For
+ each set of three angles (other than the end indicator), the output 
+contains a line with the height above the field in feet (to the nearest 
+foot) with no leading spaces. (Note: x.5 rounds up to x + 1.) </div><p class="pst">Sample Input</p><pre class="sio">50 4
+43.88 46.85 40.70
+34.52 39.50 35.43
+27.05 29.22 26.14
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">90
+70
+60
+</pre></td></tr></tbody></table>
+<p></p>
+</body></html>

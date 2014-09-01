@@ -1,0 +1,117 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1999/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><style type="text/css"></style></head><body>KTX (Korea Train eXpress), Korea's high-speed rail system operated by KORAIL, connects the capital Seoul to several major cities of 
+the Korean Peninsula. KORAIL's most recent train sets KTX-II, which were developed in Korea, can travel at over 350 km/h. The 
+next-generation test train is currently being developed, and the train is planned to be able to travel at over 400 km/h by 2012. KTX 
+Goyang Train Depot, which is located behind Haengsin Station, is one of the biggest train depots in Korea. The train depot consists of 
+a set of parallel tracks for storing KTX trains and facilities for carrying out repair jobs. 
+
+<p>
+All trains whose home is KTX Goyang Train 
+Depot enter the depot until the middle of the night and leave it in the morning. Each train might enter the depot either from the eastern 
+side or from the western side and might leave the depot to the eastern side or to the western side. The direction from which it enters or 
+to which it leaves the depot, however, is fixed. Also the arrival and departure times are fixed. Hence, the train is labeled with the time 
+interval <span class="MATH">[<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>]</span> in which it stays in the depot and an arrival and departure direction <span class="MATH"><i>d</i><sub>1</sub></span> and <span class="MATH"><i>d</i><sub>2</sub></span>, respectively. For example, a train 
+labeled [-6E,13W] is a train that enters the depot at time -6 from the eastern side and leaves the depot at time 13 to the western side. 
+In the meanwhile, it stops on one of several parallel tracks in the depot. 
+
+</p><p>
+No two trains arrive from the same direction at the same time 
+or depart to the same direction at the same time. There might be several trains waiting at the same track. Each train is assigned to a 
+track such that it can leave the depot on time without being blocked by other trains. That is, the assignment of Figure 1 is not feasible, 
+since train [-2E,2W] would be blocked by train [-1W,4W]. The assignments in Figures 2(a) and 2(b) are both feasible. However, an interesting 
+assignment is the one in Figure 2(b), which uses the minimum number of tracks.
+
+</p><p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p4852a.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p4852a.eps}" border="0" height="153" src="p4852a.png" width="533">
+</div>
+<p>
+</p><div align="CENTER">Figure 1. An infeasible track assignment
+
+</div>
+<p>
+</p><div align="CENTER">
+<!-- MATH
+ $\epsfbox{p4852b.eps}$
+ -->
+<img align="BOTTOM" alt="\epsfbox{p4852b.eps}" border="0" height="208" src="p4852b.png" width="1182">
+</div>
+<p>
+</p><div align="CENTER">Figure 2. Feasible track assignments
+
+</div>
+<p>
+It is planned to increase the number of KTX trains whose home is KTX Goyang Train Depot. Dr. Chwa, who is the President of KORAIL Research 
+Institute, foresees that it might cause a difficulty in storing trains in the depot due to the limit on the number of tracks. The length 
+of a track will be no problem since each track is long enough to store even all the trains. Dr. Chwa is eager to determine the minimum 
+number of tracks to store all the trains such that each train can leave the depot on time without being blocked by other trains. Write 
+a program that can help him.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+Your program is to read from standard input. The input consists of <span class="MATH"><i>T</i></span> test cases. The number of test cases <span class="MATH"><i>T</i></span> is given in the first 
+line of the input. The first line of each test case contains an integer <span class="MATH"><i>n</i></span> which represents the number of trains, where <!-- MATH
+ $1 \le n \le 10,000$
+ -->
+<span class="MATH">1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4852img3.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4852img3.png" width="18">10, 000</span>. 
+In the following <span class="MATH"><i>n</i></span> lines, each line contains a train label <!-- MATH
+ $t_1d_1t_2d_2$
+ -->
+<span class="MATH"><i>t</i><sub>1</sub><i>d</i><sub>1</sub><i>t</i><sub>2</sub><i>d</i><sub>2</sub></span>, which represents a train that enters the depot at time <span class="MATH"><i>t</i><sub>1</sub></span> 
+from the 
+direction <span class="MATH"><i>d</i><sub>1</sub></span> and leaves the depot at time <span class="MATH"><i>t</i><sub>2</sub></span> to the direction <span class="MATH"><i>d</i><sub>2</sub></span>, where <span class="MATH"><i>t</i><sub>1</sub></span> and <span class="MATH"><i>t</i><sub>2</sub></span> are integers such 
+that <!-- MATH
+ $-� 1,000,000 \le t_1 < 0 < t_2 \le 1,000,000$
+ -->
+<span class="MATH">- 1, 000, 000<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4852img3.png" width="18"><i>t</i><sub>1</sub> &lt; 0 &lt; <i>t</i><sub>2</sub><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="4852img3.png" width="18">1, 000, 000</span> and
+<!-- MATH
+ $d_1, d_2 \in$
+ -->
+<span class="MATH"><i>d</i><sub>1</sub>, <i>d</i><sub>2</sub> <img align="MIDDLE" alt="$ \in$" border="0" height="31" src="4852img4.png" width="16"></span> {E,W}. Every line of the input contains no whitespaces except the newline character.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+ Your program is to write to standard output. Print exactly one line for each test case that contains an integer representing the 
+minimum number of tracks that Dr. Chwa is eager to know.
+
+<p>
+The following shows sample input and output for three test cases. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3
+4
+-4E1W
+-3E3E
+-1W4W
+-2E2W
+3
+-3E9W
+-2E8W
+-1E7W
+3
+-3E9E
+-2W8W
+-1W7W
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>2
+3
+1
+</pre><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

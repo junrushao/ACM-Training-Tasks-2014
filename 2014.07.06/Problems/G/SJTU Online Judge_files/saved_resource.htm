@@ -1,0 +1,366 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/3804/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="HDOJ ACM ICPC OJ C C++ Pascal Java" name="keywords"><style type="text/css">body
+{
+	font-size:14px;
+	font-family:Times New Roman;
+	background: url(background.jpg);
+}
+
+a{ color:#1a5cc8; text-decoration:none }
+a:hover { color:orange; text-decoration:underline }
+textarea { border:#879BFF 1px dashed; background-color: F4FBFF }
+input { border:#879BFF 1px dashed; font-size:14px; background-color:transparent; vertical-align: middle }
+select { margin: -2px; background-color:F4FBFF }
+img { border: none}
+hr { height: 1px; border: 0; border-top: #1a5cc8 1px dashed }
+h1 { color: #1A5CC8; text-align: center }
+
+.text40{ width: 54px; height:22px }
+.text60{ width: 80px; height:22px }
+.text90{ width: 90px; height:22px }
+.button40{ width: 54px; height:24px; background-color:F4FBFF; font-family:Tahoma; font-size:12px }
+.footer_link{ font-family: Arial; font-size:12px; font-weight:bold; color:#1a5cc8 }
+.banner{ font-family: Arial; font-weight: bold; font-size: 18px; color: #FFFFFF }
+.hot {color:red }
+.pagerunstatus { font-family:Arial;font-size:11px;color:green}
+.table_header { font-family: Arial; font-weight: bold; font-size:12px; color: #ffffff; background-color:#1a5cc8; text-align:center }
+.table_text { font-family: Tahoma; font-size:12px}
+.code {word-wrap: break-word; word-break:break-all; background-color:#f4fbff; border:#b7cbff 1px dashed; font-size:12px; font-family: Courier New, Courier; text-align:left; padding:10px}
+.fixedsize { word-wrap:break-word; word-break:break-all }
+
+#contest_nav { word-wrap:break-word; width:980px; border:1px solid #1a5cc8; background-color:#1a5cc8; line-height:32px}
+#contest_nav a { font-family: Arial; font-weight: bold; font-size: 18px; color: #FFFFFF; margin: 15px }
+#contest_nav a:hover { font-family: Arial; font-weight: bold; font-size: 18px; color:orange; margin: 15px }
+#contest_footer { width:980px; height:70px; border:1px solid #1a5cc8; text-align:center; padding: 5px 0}
+#contest_footer div{ word-wrap:break-word }
+#rollword { word-wrap:break-word; width:980px; margin-top:10px}
+
+/* Panel对象的css */
+div.panel_content {
+	height: auto;
+	background: url(panel-content.png) repeat-y;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 14px;
+	font-family: Times New Roman;
+	text-align: left
+}
+div.panel_title {
+	height: 38px;
+	background: transparent url(panel-title.png) left bottom no-repeat;
+	padding: 0 14px;
+	color: #7CA9ED;
+	font-size: 18px;
+	font-family: Arial;
+	font-weight: bold
+}
+div.panel_bottom {
+	height: auto;
+	margin: 0;
+	background: url(panel-bottom.png) left top no-repeat
+}
+div.panel_content pre {
+	margin: 0;
+	font-size: 14px
+}
+/* 高亮显示的项 */
+#highlight_item{
+	light:expression(onmouseover=function(){this.style.backgroundColor="#D7EBFF"},onmouseout=function(){this.style.backgroundColor="transparent"}) 
+}
+
+</style><style type="text/css">
+#content{
+	height:auto!important;
+	height:120px;
+	min-height:120px; 
+	font-size:16px;
+	margin:0 auto 20px auto;
+	width:100%;
+	
+}
+#maintable{
+	text-align:center;
+	font-size:14px;
+	width:100%;
+	margin:10px auto;
+	
+}
+#maintable tr{
+	height:19px;
+}
+.tbheader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:16px;
+	background-color:#1a5cc8;
+	color:white;
+}
+.tbheader a{
+	color:white;
+}
+ .contype{
+	font-size:14px;
+	margin:10px auto;
+	text-align:center;
+}
+.ctpublic{
+	color:red;
+}
+.ctprivate{
+	color:green;
+}
+.cspend{
+	color:green;
+}
+.csend{
+	color:gray;
+}
+.csrun{
+	color:red;
+}
+#content h4{
+	font-weight:normal;
+	margin:3px auto 0;
+	text-align:center;
+	color:#1a5cc8;
+	font-size:14px;
+}
+#content h2{
+	margin:5px auto;
+	text-align:center;
+	font-size:18px;
+}
+#content #errormsg{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	width:100%;
+	color:red;
+	text-align:center;
+	margin:5px auto;
+	padding:0;
+}
+
+/*DIY Contest 的相关表单*/
+#content #mkcon{
+	width:68%;
+	margin:20px auto 0 200px;
+
+}
+#content #mkcon p{
+	margin:10px auto;
+}
+#content #mkcon .timeinfo input{
+	width:40px;
+}
+#content #mkcon .timeinfo span{
+	border:#b7cbff 1px dashed;
+}
+#content #mkcon #diyconname{
+	width:414px;
+	margin-left:11px;
+}
+#content #mkcon #diyyear{
+	margin-left:36px;
+}
+#content #mkcon #diylday{
+	margin-left:21px;
+}
+#content #contesttype{
+	margin-left:16px;
+	border:none;
+}
+#content #contesttype2{
+	margin-left:16px;
+	border:none;
+}
+
+#content #mkcon #password{
+	margin-left:33px;
+	width:152px;
+}
+#content #mkpro{
+	width:50%;
+	margin:20px auto 20px 310px;
+}
+#content #mkpro h1{
+	font-size:16px;
+}
+#content #mkpro p{
+	text-align:center;
+}
+#content #mkpro #diyspid{
+	margin-left:40px;
+	width:40px;
+}
+#content #mkpro #diytpid{
+	margin-left:85px;
+	width:40px;
+}
+#content #mknotice{
+	margin:auto;
+	width:100%;
+	height:100px;
+}</style><style type="text/css">
+#content{
+	height:auto!important;
+	height:120px;
+	min-height:120px; 
+	font-size:16px;
+	margin:0 auto 20px auto;
+	width:100%;
+	
+}
+#maintable{
+	text-align:center;
+	font-size:14px;
+	width:100%;
+	margin:10px auto;
+	
+}
+#maintable tr{
+	height:19px;
+}
+.tbheader{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:16px;
+	background-color:#1a5cc8;
+	color:white;
+}
+.tbheader a{
+	color:white;
+}
+ .contype{
+	font-size:14px;
+	margin:10px auto;
+	text-align:center;
+}
+.ctpublic{
+	color:red;
+}
+.ctprivate{
+	color:green;
+}
+.cspend{
+	color:green;
+}
+.csend{
+	color:gray;
+}
+.csrun{
+	color:red;
+}
+#content h4{
+	font-weight:normal;
+	margin:3px auto 0;
+	text-align:center;
+	color:#1a5cc8;
+	font-size:14px;
+}
+#content h2{
+	margin:5px auto;
+	text-align:center;
+	font-size:18px;
+}
+#content #errormsg{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	width:100%;
+	color:red;
+	text-align:center;
+	margin:5px auto;
+	padding:0;
+}
+
+/*WEB Contest 的相关表单*/
+#content #mkcon{
+	width:68%;
+	margin:20px auto 0 200px;
+
+}
+#content #mkcon p{
+	margin:10px auto;
+}
+#content #mkcon .timeinfo input{
+	width:40px;
+}
+#content #mkcon .timeinfo span{
+	border:#b7cbff 1px dashed;
+}
+#content #mkcon #webconname{
+	width:414px;
+	margin-left:11px;
+}
+#content #mkcon #webyear{
+	margin-left:36px;
+}
+#content #mkcon #weblday{
+	margin-left:21px;
+}
+#content #contesttype{
+	margin-left:16px;
+	border:none;
+}
+#content #contesttype2{
+	margin-left:16px;
+	border:none;
+}
+
+#content #mkcon #password{
+	margin-left:33px;
+	width:152px;
+}
+#content #mkpro{
+	width:50%;
+	margin:20px auto 20px 310px;
+}
+#content #mkpro h1{
+	font-size:16px;
+}
+#content #mkpro p{
+	text-align:center;
+}
+#content #mkpro #webspid{
+	margin-left:0px;
+	width:80px;
+}
+
+#content #mknotice{
+	margin:auto;
+	width:100%;
+	height:100px;
+}
+</style></head><body>
+<a name="top"></a>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="word-wrap:break-word">
+
+
+
+<tbody><tr><td align="center"><h1 style="color:#1A5CC8">Mahjong</h1><font><b><span style="font-family:Arial;font-size:12px;font-weight:bold;color:green">Time Limit: 4000/2000 MS (Java/Others), Memory Limit: 32768/32768 K (Java/Others)</span></b></font><br><br><div align="left" class="panel_title">Problem Description</div> <div class="panel_content">In the 22nd Century, more than one hundred million people attend the Mahjong Sports all over the world. Professional Mahjong players are getting more and more attentions. In many high schools, there’ll be a large-scale Mahjong match every year to select talented students to attend the National Olympiad in Mahjong. For high scores to prove themselves and eager to be a professional Mahjong player someday, students compete with each other for the honor of the Mahjong.<br>Saki, a girl whose mother and elder sister are professional Mahjong players, will attend the National Olympiad in Mahjong in province (NOMP) this year. To beat other high school, achieve the first prize and attend the National Olympiad in Mahjong (NOM), she and her friends decide to make a camp to train their Mahjong skill.<br>A very important skill of Mahjong match is to control power of the game. A good Mahjong player could control the game, even all tiles of the game, just like Amae Koromo, whose favorite skill is "catching the moon from the bottom of the sea". This time, Saki and her friends are training their control skill of the Mahjong tiles via the following way. <br><center><img src="c398-1007-1.jpg"></center><br><br>Saki got a lot of colored Mahjong tiles, and put them into an n * n matrix. Assume there are no more than two Mahjong tiles with the same color. Saki wants to use the Psychic force to control the tiles to the specified state. She could do two kinds of operation as follows:<br>A. To choose a row arbitrarily, and then swap two tiles' position in this row. This operation will cost CA magic power.<br>B. To choose a column arbitrarily, and then swap two tiles' position in this column. This operation will cost CB magic power.<br>Moreover, if you do the same kind of operation as you just did, the operation will cost no power. For example, Saki could make operation BAAAAA but just cost CB+CA magic power. Saki wants to know how to do the operations to finish the task with the least cost.<br><br><br><br><br><br><br><br><br></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Input</div> <div class="panel_content">There are several cases.<br>The first line is an integer T (T &lt; = 20), indicating the test cases.<br>Each case starts with three integers n, CA, CB, (1&lt;=n&lt;=300, 1&lt;=CA, CB&lt;=10^6). then 2*n*n integer follows, indicating the initial state and the target state of the grid. Each integer Aij(1&lt;=Aij&lt;=10^5) represent a Mahjong tile.<br><br><br></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Output</div> <div class="panel_content">For each test case, you should output the minimum cost of the game. If Saki couldn't finish the game, output "Take off the shoes!" instead. The output format is as follows.</div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Sample Input</div><div class="panel_content"><pre><div style="font-family:Courier New,Courier,monospace;">3
+3 16 9
+2 5 6
+1 1 3
+7 8 3
+2 5 1
+3 3 6
+7 8 1
+2 193 43
+1 2
+2 1
+1 2
+2 2
+3 10 20
+1 2 3
+4 5 4
+3 2 1
+2 1 2
+1 5 3
+4 3 4</div></pre></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Sample Output</div><div class="panel_content"><pre><div style="font-family:Courier New,Courier,monospace;">Case #1: 34
+Case #2: Take off the shoes!
+Case #3: 30</div></pre></div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Author</div> <div class="panel_content">BUPT</div><div class="panel_bottom">&nbsp;</div><br><div align="left" class="panel_title">Source</div> <div class="panel_content">2012 Multi-University Training Contest 1</div> <div class="panel_bottom">&nbsp;</div><br> <br><center style="font-size:15px;font-family:Arial;font-weight:bold;color:#1A5CC8"><a href="http://172.16.45.6/problems/3804/html/statistic.php?pid=4306&PHPSESSID=s3hmhlbaofv5hcdrrglcfer6v4">Statistic</a>&nbsp;|&nbsp;<a href="http://172.16.45.6/problems/3804/html/submit.php?pid=4306&PHPSESSID=s3hmhlbaofv5hcdrrglcfer6v4">Submit</a>&nbsp;|&nbsp;<a href="http://172.16.45.6/problems/3804/html/discuss/problem/list.php?problemid=4306&PHPSESSID=s3hmhlbaofv5hcdrrglcfer6v4">Discuss</a> | <a href="http://172.16.45.6/problems/3804/html/note/note.php?pid=4306&PHPSESSID=s3hmhlbaofv5hcdrrglcfer6v4">Note</a><br></center><br><br><br><br><br><br><br><br><br><br></td></tr>
+</tbody></table>
+
+</body></html>

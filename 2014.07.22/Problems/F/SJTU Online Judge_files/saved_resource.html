@@ -1,0 +1,162 @@
+
+<!-- saved from url=(0038)http://172.16.45.6/problems/1976/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style>
+<style type="text/css"></style></head><body><p>
+Bonjol is given a new tassk in his company. He is given a piece of 
+code written in Pascal programming language for controlling a set 
+of lights, and his task is to refactor the code an minimize its 
+size while keeping the program logic exactly the same as before. 
+The code is made up of several conditional statements. Each 
+conditional statement is a line of the form 
+
+</p><p>
+</p><p>
+<br>
+<tt>if</tt> <!-- MATH
+ $\langle variable \rangle \langle comparison-operator \rangle \langle
+comparison-value \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>variable</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>operator</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>value</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span> <tt>then turnOn</tt> <tt>(</tt> <!-- MATH
+ $\langle light-number \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>light</i> - <i>number</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span>
+<tt>);</tt>
+</p><p>
+</p><p>
+<br>
+where 
+
+</p><p>
+</p><ul>
+<li><!-- MATH
+ $\langle variable \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>variable</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span> is a string of at most 255 lowercase English letters 
+which is the name of a Pascal integer variable; 
+</li>
+<li><!-- MATH
+ $\langle comparison-operator \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>operator</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span> is either ``<tt>&lt;</tt>", ``<tt>&gt;</tt>", or 
+``<tt>=</tt>";  
+</li>
+<li><!-- MATH
+ $\langle comparison-value \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>value</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span> is a 32-bit integer constant to which the 
+<!-- MATH
+ $\langle variable \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>variable</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span> is compared; 
+</li>
+<li><!-- MATH
+ $\langle light-number \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>light</i> - <i>number</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span> is another 32-bit integer constant which 
+shows the number of the light which should be turned on if the 
+condition ``<!-- MATH
+ $\langle variable \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>variable</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span> <!-- MATH
+ $\langle comparison-operator \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>operator</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span>
+<!-- MATH
+ $\langle comparison-value \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>value</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span>" holds. (Nothing happens if the light is 
+already turned on.) 
+</li>
+</ul>
+<p>
+</p><p>
+<br>
+Here is an example of such a code:
+
+</p><p>
+</p><pre>if a &lt; 3 then turnOn( 5 );
+if bcq &gt; -43 then turnOn( -117 );
+if cc = 0 then turnOn( 200 );
+</pre>
+<p>
+The only code modification which Bonjol is allowed is to 
+delete a complete line. He wants to delete as many lines as 
+possible such that the modified program remains completely equivalent 
+to its original version. You are to help him and calculate the 
+maximum number of lines which could be deleted.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001001000000000000000">
+Input</a>&nbsp;</font>
+</h2>
+<p>
+The input contains several test cases. Each test case starts with a 
+line containing an integer <span class="MATH"><i>n</i></span> <!-- MATH
+ $(1 \le n \le 500)$
+ -->
+<span class="MATH">(1<img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5051img3.png" width="18"><i>n</i><img align="MIDDLE" alt="$ \le$" border="0" height="31" src="5051img3.png" width="18">500)</span> which is the number 
+of lines in the code. Each of the next <span class="MATH"><i>n</i></span> lines has a conditional 
+statement. In each conditional statement, there is a single space 
+after ``<tt>if</tt>", the <!-- MATH
+ $\langle variable \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>variable</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span>, the 
+<!-- MATH
+ $\langle comparison-operator \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>operator</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span>, the <!-- MATH
+ $\langle comparison-value \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>comparison</i> - <i>value</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span>, 
+``<tt>then</tt>", ``<tt>turnOn(</tt>", and the <!-- MATH
+ $\langle light-number \rangle$
+ -->
+<span class="MATH"><img align="MIDDLE" alt="$ \langle$" border="0" height="36" src="5051img1.png" width="11"><i>light</i> - <i>number</i><img align="MIDDLE" alt="$ \rangle$" border="0" height="36" src="5051img2.png" width="11"></span>. 
+The input terminates with a line containing 
+``<tt>0</tt>" which should not be processed as a test case.
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001002000000000000000">
+Output</a>&nbsp;</font>
+</h2>
+<p>
+Write the rest of the <span class="MATH"><i>i</i></span>-th case, on the <span class="MATH"><i>i</i></span>-th line of output. 
+You should just write one integer indicating the maximum number of 
+lines that Bonjol can delete. 
+
+</p><p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001003000000000000000">
+Sample Input</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>7 
+if aa &lt; 4 then turnOn( 3 ); 
+if aa &gt; 7 then turnOn( 3 ); 
+if aa = 7 then turnOn( 3 ); 
+if aa = -1 then turnOn( 3 );
+if aa &lt; 7 then turnOn( 3 ); 
+if b = 6 then turnOn( 4 ); 
+if b = 6 then turnOn( 3 ); 
+4 
+if pq = 6 then turnOn( 7 );
+if pq = 6 then turnOn( 7 );
+if pq = 6 then turnOn( 1 );
+if pq = 2 then turnOn( 1 );
+4 
+if pq = 6 then turnOn( 8 );
+if pq = 6 then turnOn( 8 );
+if pq = 6 then turnOn( 9 );
+if pq &lt; 8 then turnOn( 9 );
+0
+</pre>
+<p>
+</p><h2><font color="#ff0000" size="4"><a name="SECTION0001004000000000000000">
+Sample Output</a>&nbsp;</font>
+</h2>
+<p>
+</p><pre>3 
+1 
+2
+</pre>
+<p>
+</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></body></html>

@@ -1,0 +1,49 @@
+<html><head><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="no-cache" http-equiv="Pragma"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="en-US" http-equiv="Content-Language"><title>1234 -- Ball Toss</title><style type="text/css">A {	TEXT-TRANSFORM: none; TEXT-DECORATION: none } A:hover { COLOR: red; TEXT-DECORATION: underline } A.s { TEXT-TRANSFORM: none; TEXT-DECORATION: none;	color:black; } A.s:hover {	COLOR: white; TEXT-DECORATION: none; } A.s0 { TEXT-TRANSFORM: none; TEXT-DECORATION: none;  color:#FFFF99;	font-weight:bold; } A.s0:hover { TEXT-DECORATION: underline; color:#FFFF99;	font-weight:bold; } A.t { TEXT-DECORATION: none; color:#FFFF66; } A.t:hover {	color:#FFFF66; text-decoration: underline; } A.x { TEXT-DECORATION: none; color:white; font-weight:bold;} A.x:hover {	color:#FFFF66; text-decoration: underline; font-weight:bold;} A.bt { padding:2px 3px 2px 3px; margin: 0px; height: 20px; color:blue; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;} A.bt:hover {background-color:#E6E6E6; padding:1px 2px; margin: 0px; border: 1px solid #999; height: 20px; color:#000066; text-decoration: none; cursor: hand;} div.sd1 { position:absolute; left:0px} div.sd2 { position:absolute; right:0px} div.ptt { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} div.plm { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:12pt;} div.ptx { font-family:"Times New Roman",Times,serif; font-size:12pt;} p.pst { text-align:left; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} pre.sio { font-family:Courier New,Courier,monospace; font-size:12pt;} th.h {color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; width:20%;} td.h { font-family:Arial, Helvetica, sans-serif; } th.in {color:#FFFFFF; text-align:center; background-color:#6589d1; border-color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } table.a {background-image:url('images/table_back.jpg'); border-collapse:collapse; font-family:"Times New Roman", Times, serif; } table.h1 {border-collapse:collapse; width:100%; background-color:#BECEF1; border-width:0px;} table.h2 {width:100%; background:url('images/bar.jpg') repeat-y; border-width:0px;} tr.in {color:#FFFFFF; text-align:center; background-color:#6589d1; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } tr.h { background-color:#6589d1; vertical-align:top; color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; } span.b1 {color:#6589D1; font-weight:bold; font-size:x-small } span.b2 {color:gray; font-size:x-small } span.n1 {color:red; font-size:x-small } ul.v {filter:Alpha(opacity=100); overflow:hidden; } table.survey {border-collapse:collapse; font-family:"Times New Roman", Times, serif;}
+.stdft { font-family:"Times New Roman", Times, serif; } span.h_txt { color: blue; } span.h_award { color: red; }  span.h_nocontest { color: #1a5cc8; }  span.h_contest { color: red;} 
+</style></head><body leftmargin="5" onkeydown="KeyDown(event)" alink="blue" lang="en-US" link="blue" vlink="blue"><a name="top"></a><marquee behavior="ALTERNATE" scrollamount="3" scrolldelay="150"><font color="red">北京大学暑期课：<a href="http://acm.pku.edu.cn/summerschool/pku_acm_train.htm">《ACM/ICPC竞赛训练》</a>面向全球招生</font></marquee><table background="a_data/table_back.html" border="0" width="100%"><tbody><tr><td>
+<div class="ptt" lang="en-US">Ball Toss</div>
+<div class="plm"><table align="center"><tbody><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 10000K</td></tr></tbody></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">Classmates
+ stand in a circle facing inward, each with the direction left or right 
+in mind. One of the students has a ball and begins by tossing it to 
+another student. (It doesn't really matter which one.)When one catches 
+the ball and is thinking left, she throws it back across the circle one 
+place to the left (from her perspective) of the person who threw her the
+ ball. Then she switches from thinking left to thinking right. 
+Similarly, if she is thinking right, she throws the ball to the right of
+ the person who threw it to her and then switches from thinking right to
+ thinking left.
+<br> <br>There are two exceptions to this rule: If one catches the ball 
+from the classmate to her immediate left and is also thinking left, she 
+passes the ball to the classmate to her immediate right, and then 
+switches to thinking right. Similarly, if she gets the ball from the 
+classmate to her immediate right and is thinking right, she passes the 
+ball to the classmate to her immediate left, and then switches to 
+thinking left.(Note that these rules are given to avoid the problem of 
+tossing the ball to oneself.)
+<br> <br>No matter what the initial pattern of left and right thinking 
+is and who first gets tossed the ball,everyone will get tossed the ball 
+eventually! In this problem, you will figure out how long it takes.
+<br> <br>You'll be given the initial directions of n classmates 
+(numbered clockwise), and the classmate to whom classmate 1 initially 
+tosses the ball. (Classmate 1 will always have the ball initially.)
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There will be multiple problem instances. Each problem instance will be of the form
+<br> <br>n k t1 t2 t3 . . . tn
+<br> <br>where n (2 &lt;= n &lt;= 30) is the number of classmates, 
+numbered 1 through n clockwise around the circle,k (&gt; 1) is the 
+classmate to whom classmate 1 initially tosses the ball, and ti (i = 1, 
+2, . . . , n) are eacheither L or R, indicating the initial direction 
+thought by classmate i. (n = 0 indicates end of input.)
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each problem instance, you should generate one line of output of the form:
+<br> <br>Classmate m got the ball last after t tosses.
+<br> <br>where m and t are for you to determine. You may assume that t will be no larger than 100,000.
+<br>Note that classmate number 1 initially has the ball and tosses it to
+ classmate k. Thus, number 1 has not yet been tossed the ball and so 
+does not switch the direction he is thinking.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4 2 L L L L
+4 3 R L L R
+10 4 R R L R L L R R L R
+0</pre><p class="pst">Sample Output</p><pre class="sio">Classmate 3 got the ball last after 4 tosses.
+Classmate 2 got the ball last after 4 tosses.
+Classmate 9 got the ball last after 69 tosses.</pre></td></tr></tbody></table>
+<p></p>
+</body></html>

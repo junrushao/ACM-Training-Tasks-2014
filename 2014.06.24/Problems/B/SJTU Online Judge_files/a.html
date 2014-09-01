@@ -1,0 +1,43 @@
+<html><head><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="no-cache" http-equiv="Pragma"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="en-US" http-equiv="Content-Language"><title>2273 -- An Excel-lent Problem</title><style type="text/css">A {	TEXT-TRANSFORM: none; TEXT-DECORATION: none } A:hover { COLOR: red; TEXT-DECORATION: underline } A.s { TEXT-TRANSFORM: none; TEXT-DECORATION: none;	color:black; } A.s:hover {	COLOR: white; TEXT-DECORATION: none; } A.s0 { TEXT-TRANSFORM: none; TEXT-DECORATION: none;  color:#FFFF99;	font-weight:bold; } A.s0:hover { TEXT-DECORATION: underline; color:#FFFF99;	font-weight:bold; } A.t { TEXT-DECORATION: none; color:#FFFF66; } A.t:hover {	color:#FFFF66; text-decoration: underline; } A.x { TEXT-DECORATION: none; color:white; font-weight:bold;} A.x:hover {	color:#FFFF66; text-decoration: underline; font-weight:bold;} A.bt { padding:2px 3px 2px 3px; margin: 0px; height: 20px; color:blue; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;} A.bt:hover {background-color:#E6E6E6; padding:1px 2px; margin: 0px; border: 1px solid #999; height: 20px; color:#000066; text-decoration: none; cursor: hand;} div.sd1 { position:absolute; left:0px} div.sd2 { position:absolute; right:0px} div.ptt { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} div.plm { text-align:center; font-family:Arial,Helvetica,sans-serif; font-size:12pt;} div.ptx { font-family:"Times New Roman",Times,serif; font-size:12pt;} p.pst { text-align:left; font-family:Arial,Helvetica,sans-serif; font-size:18pt; font-weight:bold; color:blue;} pre.sio { font-family:Courier New,Courier,monospace; font-size:12pt;} th.h {color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; width:20%;} td.h { font-family:Arial, Helvetica, sans-serif; } th.in {color:#FFFFFF; text-align:center; background-color:#6589d1; border-color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } table.a {background-image:url('images/table_back.jpg'); border-collapse:collapse; font-family:"Times New Roman", Times, serif; } table.h1 {border-collapse:collapse; width:100%; background-color:#BECEF1; border-width:0px;} table.h2 {width:100%; background:url('images/bar.jpg') repeat-y; border-width:0px;} tr.in {color:#FFFFFF; text-align:center; background-color:#6589d1; font-family:Arial, Helvetica, sans-serif; font-weight:bold; } tr.h { background-color:#6589d1; vertical-align:top; color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; } span.b1 {color:#6589D1; font-weight:bold; font-size:x-small } span.b2 {color:gray; font-size:x-small } span.n1 {color:red; font-size:x-small } ul.v {filter:Alpha(opacity=100); overflow:hidden; } table.survey {border-collapse:collapse; font-family:"Times New Roman", Times, serif;}
+.stdft { font-family:"Times New Roman", Times, serif; } span.h_txt { color: blue; } span.h_award { color: red; }  span.h_nocontest { color: #1a5cc8; }  span.h_contest { color: red;} 
+</style></head><body leftmargin="5" onkeydown="KeyDown(event)" alink="blue" lang="en-US" link="blue" vlink="blue"><a name="top"></a><marquee behavior="ALTERNATE" scrollamount="3" scrolldelay="150"><font color="red">北京大学暑期课：<a href="http://acm.pku.edu.cn/summerschool/pku_acm_train.htm">《ACM/ICPC竞赛训练》</a>面向全球招生</font></marquee><table border="0" background="a_data/table_back.html" width="100%"><tbody><tr><td>
+<div class="ptt" lang="en-US">An Excel-lent Problem</div>
+<div class="plm"><table align="center"><tbody><tr><td><b>Time Limit:</b> 1000MS</td><td width="10px"></td><td><b>Memory Limit:</b> 65536K</td></tr></tbody></table></div><p class="pst">Description</p><div class="ptx" lang="en-US">A
+ certain spreadsheet program labels the columns of a spreadsheet using 
+letters. Column 1 is labeled as ``A", column 2 as ``B", ..., column 26 
+as ``Z". When the number of columns is greater than 26, another letter 
+is used. For example, column 27 is ``AA", column 28 is ``AB" and column 
+52 is ``AZ". It follows that column 53 would be ``BA" and so on. 
+Similarly, when column ``ZZ" is reached, the next column would be 
+``AAA", then ``AAB" and so on. 
+<br> <br>The rows in the spreadsheet are labeled using the row number. Rows start at 1. 
+<br> <br>The designation for a particular cell within the spreadsheet is
+ created by combining the column label with the row label. For example, 
+the upper-left most cell would be ``A1". The cell at column 55 row 23 
+would be ``BC23". 
+<br> <br>You will write a program that converts numeric row and column values into the spreadsheet designation. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input
+ consists of lines of the form: RnCm. n represents the row number 
+[1,300000000] and m represents the column number, 1&lt;=m&lt;=300000000.
+ The values n and m define a single cell on the spreadsheet. Input 
+terminates with the line: R0C0 (that is, n and m are 0). There will be 
+no leading zeroes or extra spaces in the input. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For 
+each line of input (except the terminating line), you will print out the
+ spreadsheet designation for the specified cell as described above.</div><p class="pst">Sample Input</p><pre class="sio">R1C1
+R3C1
+R1C3
+R299999999C26
+R52C52
+R53C17576
+R53C17602
+R0C0
+</pre><p class="pst">Sample Output</p><pre class="sio">A1
+A3
+C1
+Z299999999
+AZ52
+YYZ53
+YZZ53
+</pre></td></tr></tbody></table>
+<p></p>
+</body></html>

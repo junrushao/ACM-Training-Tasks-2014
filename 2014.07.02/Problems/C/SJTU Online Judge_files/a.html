@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><style>   body { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }</style><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="width=768" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>1822. Hugo II's War @ Timus Online Judge</title></head><body alink="#1A5CC8" link="#1A5CC8" vlink="#1A5CC8"><div class="prnver"><h2 class="problem_title">1822. Hugo II's War</h2><div class="problem_limits">Time limit: 0.5 second<br>Memory limit: 64 MB<br><br></div><div id="problem_text"><div class="problem_par"><div class="problem_par_normal">The glorious King Hugo II has declared a war—a war that is holy, 
+victorious, almost bloodless, but ruinous!</div></div><div class="problem_par"><div class="problem_par_normal">Right after declaring the war the king has started summoning the army. He 
+plans to send a recruitment order to all his immediate vassals, who will 
+send the order to their vassals, and so on. In the end, every nobleman of 
+the kingdom will be involved in the preparation for the war.</div></div><div class="problem_par"><div class="problem_par_normal">As soon as a nobleman who has no vassals receives the order, he 
+immediately begins recruiting soldiers and joins his overlord in a few 
+days. If a nobleman has vassals, he waits until there are at least <i>x</i>% 
+of his immediate vassals ready for the war, then summons his own troops 
+and also joins his overlord. 
+The glorious King Hugo II will go the war as soon as at least <i>x</i>% of his 
+immediate vassals are ready.</div></div><div class="problem_par"><div class="problem_par_normal">King Hugo II wants to state the number <i>x</i> in his recruitment order. The 
+king needs as many soldiers as possible for his military campaign. 
+However, if the recruitment takes more than <i>t</i> days, the enemy may learn 
+about the imminent intrusion and strike first. Help Hugo II find the 
+maximal possible value of <i>x</i>.</div></div><h3 class="problem_subtitle">Input</h3><div class="problem_par"><div class="problem_par_normal">The first line contains the number <i>n</i> of noblemen in the kingdom and the 
+maximal number of days <i>t</i> that can be spent for summoning the army
+(1 ≤ <i>n</i> ≤ 10<sup>4</sup>; 0 ≤ <i>t</i> ≤ 10<sup>6</sup>). The 
+noblemen are numbered from 1 to <i>n</i>. King Hugo II has number 1, and the 
+noblemen with numbers from 2 to <i>n</i> are described in the following 
+<i>n</i> − 1 lines. The <i>i</i>-th of these lines describes the nobleman 
+with number <i>i</i> and contains integers <i>p<sub>i</sub></i> and 
+<i>t<sub>i</sub></i>, where <i>p<sub>i</sub></i> is the number of his 
+overlord and <i>t<sub>i</sub></i> is the number of days the <i>i</i>-th 
+nobleman will need to summon his troops 
+(1 ≤ <i>p<sub>i</sub></i> ≤ <i>n</i>; 0 ≤ <i>t<sub>i</sub></i> ≤ 100).</div></div><h3 class="problem_subtitle">Output</h3><div class="problem_par"><div class="problem_par_normal">Output the maximal possible value of <i>x</i> with absolute error at most 10<sup>−4</sup>.</div></div><h3 class="problem_subtitle">Sample</h3><table class="sample"><tbody><tr><th width="350">input</th><th width="350">output</th></tr><tr><td><pre class="intable">6 3
+1 2
+2 2
+2 1
+1 2
+1 4
+</pre></td><td><pre class="intable">50.00000000
+</pre></td></tr></tbody></table><div class="problem_source"><b>Problem Author: </b>Kirill Butin<br><b>Problem Source: </b>XII USU Open Personal Contest (March 19, 2011)<br><br></div></div></div><script src="a_data/watch.js" async="" type="text/javascript"></script><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20918869 = new Ya.Metrika({id:20918869, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img alt="" src="http://mc.yandex.ru/watch/20918869" style="position:absolute; left:-9999px;"/></div></noscript><iframe name="RemoteIframe" allowtransparency="true" style="position: absolute; left: -999px; top: -999px; width: 1px; height: 1px;"></iframe></body></html>
